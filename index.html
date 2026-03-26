@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="es">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="robots" content="index, follow" />
+          <meta name="author" content="Andrés. E. Vento. C" />
+          <meta name="description" content="Desarrollador Junior con muchas ganas de aprender y apasionado por la resolución de problemas y la creación de soluciones innovadoras. Competente en Python y entusiasta de la programación web con JavaScript. Busco oportunidades para seguir aprendiendo y contribuyendo al mundo tecnológico." />
+          <title>💼 Andrés Vento - Portafolio Web </title>
+          <!--===== Meta Open Graph (Facebook, LinkedIn, etc.) =====-->
+          <meta property="og:title" content="Portafolio de Andrés - Desarrollador Web">
+          <meta property="og:description" content="Portafolio profesional de desarrollo web, proyectos y habilidades en programación.">
+          <meta property="og:image" content="https://tudominio.com/assets/img/preview.png">
+          <meta property="og:url" content="https://tudominio.com">
+          <meta property="og:type" content="website">
+          <meta property="og:locale" content="es_ES">
+          <!--===== Meta Twitter Card =====-->
+          <meta name="twitter:card" content="summary_large_image">
+          <meta name="twitter:title" content="Portafolio de Andrés">
+          <meta name="twitter:description" content="Desarrollador web y proyectos de programación.">
+          <meta name="twitter:image" content="https://tudominio.com/assets/img/preview.png">
+          <!--===== Canonical URL =====-->
+          <link rel="canonical" href="https://tudominio.com/">
+          <!--============== CSS ================-->
+          <link rel="stylesheet" href="./src/css/output.css" />
+          <!--============== Google Fonts ================-->
+          <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:opsz,wght@14..32,500&display=swap" rel="stylesheet">
+          <!--============== Favicon ================-->
+          <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon_io/apple-touch-icon.png">
+          <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon_io/favicon-32x32.png">
+          <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon_io/favicon-16x16.png">
+          <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon_io/site.webmanifest">
+          <!--============== Font Awesome 7.0.1 ================-->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <!--============== Remix Icon ================-->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     </head>
+     <body>
+          <!--============== HEADER ==============-->
+          <header id="navbar" class="sticky top-0 z-50 transition-all duration-300">
+               <nav class="relative container flex justify-between items-center">
+                    <div class="py-5 cursor-pointer">
+                         <a href="#inicio">
+                              <!-- Logo modo claro -->
+                              <img src="./assets/img/logo.png" loading="lazy" alt="logo" class="w-20 md:w-27 hidden dark:block" id="logo-claro">
+                              <!-- Logo modo oscuro -->
+                              <img src="./assets/img/logoBlack.png" loading="lazy" alt="black_logo" class="w-20 md:w-27 dark:hidden" id="logo-oscuro">
+                         </a>
+                    </div>
+                    <div id="nav-menu" class=" fixed -top-full left-0 w-full bg-[hsla(216,100%,5%,0.85)] backdrop-blur-md py-20 text-center transition-all duration-500 ease-in-out lg:static lg:top-0 lg:block lg:bg-transparent lg:backdrop-blur-0 lg:py-0 lg:w-auto lg:ml-auto">
+                         <div class="text-sectionColor mb-10 flex flex-col items-center gap-4 lg:hidden">
+                              <span class="text-sm opacity-70 tracking-widest font-bold">- MENU -</span>
+                              <h3 class="text-lg font-semibold">💼 Andrés Vento 🚀</h3>
+                         </div>
+                         <ul class="flex flex-col items-center text-center gap-8 lg:flex-row lg:gap-5">
+                              <li>
+                                   <a href="#proyectos" class="nav-link">Proyectos</a>
+                              </li>
+                              <li>
+                                   <a href="#sobre_mi" class="nav-link">Sobre Mí</a>
+                              </li>
+                              <li>
+                                   <a href="#skills" class="nav-link">Skills</a>
+                              </li>
+                              <li>
+                                   <a href="#curriculum" class="nav-link">Currículum</a>
+                              </li>
+                              <li>
+                                   <a href="#servicios" class="nav-link">Servicios</a>
+                              </li>
+                              <li>
+                                   <a href="#testimonios" class="nav-link">Testimonios</a>
+                              </li>
+                               <li>
+                                   <a href="#contacto" class="nav-link">Contacto</a>
+                              </li>
+                         </ul>
+                         <div id="nav-close" class="text-whiteColor absolute top-9 right-5 text-3xl cursor-pointer lg:hidden">
+                              <i class="fa-solid fa-xmark"></i>
+                         </div>
+                    </div>
+                    <div class="flex items-center gap-3 sm:gap-5">
+                         <i class="fa-regular fa-moon cursor-pointer ml-4 sm:ml-8 md:ml-16 text-2xl" id="theme-btn"></i>
+                         <!-- Botón hamburguesa -->
+                         <div id="hamburguesa" class="lg:hidden">
+                              <i class="fa-solid fa-bars-staggered cursor-pointer ml-4 text-2xl"></i>
+                         </div>
+                    </div>
+               </nav>
+          </header>
+ 
+          <main>
+               <!--============== INICIO ==============-->
+               <!-- NOTA: Agregar animación al borde de la foto que parezca un letrero neon con los bordes azul recoriendolo del mismo tono que tiene.-->
+               <section id="inicio" class="relative py-5 overflow-x-clip">
+
+                    <!-- Particles.JS -->
+                    <div id="particlesJS" class="absolute inset-0 w-full h-full z-0"></div>
+
+                    <!-- Adorno Azul -->
+                    <div class="absolute right-0 top-[-20%] w-80 h-80 bg-primaryColorLight dark:bg-primaryColorLight mix-blend-screen dark:mix-blend-screen rounded-full blur-[150px] opacity-50"></div>
+                    
+                    <div class="container relative z-10"> 
+                         <!-- Contenido -->
+                         <div class="flex flex-col md:flex-row items-center gap-10">
+                              <div class="inicio__content space-y-5 md:w-1/2 text-center md:text-left">
+                                   <div>
+                                        <p class="text-xl sm:text-2xl md:text-3xl flex items-center gap-2 justify-center md:justify-start">
+                                             <span class="text-3xl sm:text-4xl md:text-5xl inline-block animate-wave origin-bottom-right">
+                                                  👋🏼
+                                             </span>
+                                             ¡Hola!
+                                        </p>
+                                   </div>
+                                   <h1 class="text-center md:text-left">
+                                        <span class="title leading-normal">SOY ANDRÉS</span>
+                                   </h1>
+                                   <div class="relative flex justify-center md:hidden">
+
+                                        <div class="absolute left-0 bottom-0 w-80 h-80 bg-primaryColorLight mix-blend-screen dark:mix-blend-screen  rounded-full blur-[150px] opacity-50"></div>
+
+                                        <div class="border-animated my-10 max-w-[70%] rotate-[4.5deg] hover:rotate-0 duration-300">
+                                             <div class="inner-mask"></div>
+                                             <img src="./assets/img/yo1.jpeg" alt="Foto de Andrés Vento" class="rounded-[38px] w-full">
+                                        </div>
+
+                                   </div>
+
+                                   <!-- Disponible para Trabajar -->
+                                   <div class="flex flex-wrap justify-center md:justify-start">
+                                        <a href="#contacto" class="group relative inline-flex items-center gap-3 px-4 py-2 mb-3 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-500 ease-in-out border rounded-full backdrop-blur-xl bg-white/60 text-slate-700 border-primaryColor shadow-sm hover:bg-primaryColor hover:text-white hover:border-primaryColor dark:bg-slate-900/40 dark:text-emerald-400 dark:border-emerald-500/30 dark:hover:bg-emerald-500/10 dark:hover:border-emerald-400 hover:shadow-lg hover:-translate-y-0.5 active:scale-95">
+
+                                             <span class="relative flex h-3 w-3">
+                                                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></span>
+                                             </span>
+
+                                             <span class="uppercase tracking-wider">
+                                                  ¡Trabajemos juntos! 
+                                             </span>
+                                             
+                                             <i class="fa-solid fa-circle-check text-[25px] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                                        </a>
+                                   </div>
+
+                                   <p class="max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl pb-5 text-center md:text-left">
+                                        Soy un Técnico Superior Universitario en Informática, Desarrollador Junior, apasionado por la tecnología, la resolución de problemas y la creación de software.
+                                   </p>
+
+                                   <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-6 sm:gap-4">
+                                   
+                                        <a href="./assets/doc/Andrés_Vento_TSU_en_Informática_CV.pdf" target="_blank" rel="noopener noreferrer" title="Mi Currículum" class="btn_outline text-lg sm:text-base md:text-lg px-9">
+                                             Ver Currículum <i class="fa-solid fa-file-lines"></i>
+                                        </a>
+
+                                        <div class="flex items-center justify-center gap-5 sm:gap-4">
+                                             <div class="social-icon">
+                                                  <a href="#" title="Mi Correo" class="copy-icon text-2xl" data-copy="andresvento2004@gmail.com" data-text="Correo">
+                                                       <i class="fa-solid fa-envelope"></i>
+                                                  </a>
+                                             </div>
+
+                                             <div class="social-icon">
+                                                  <a href="#" title="Mi Teléfono" class="copy-icon text-2xl" data-copy="+58 424 217 1412" data-text="Teléfono">
+                                                       <i class="fa-solid fa-phone"></i>
+                                                  </a>
+                                             </div>
+
+                                             <div class="social-icon">
+                                                  <a href="https://www.linkedin.com/in/andrés-vento-casseres/" target="_blank" rel="noopener noreferrer" title="Mi LinkedIn" class="text-2xl">
+                                                       <i class="fa-brands fa-square-linkedin"></i>
+                                                  </a>
+                                             </div>
+
+                                             <div class="social-icon">
+                                                  <a href="https://github.com/AndresVentto" target="_blank" rel="noopener noreferrer" title="Mi GitHub" class="text-2xl">
+                                                       <i class="fa-brands fa-github"></i>
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="inicio__imagen relative hidden md:w-1/2 md:flex justify-center md:block">
+
+                                   <div class="absolute left-0 bottom-0 w-80 h-80 bg-primaryColorLight mix-blend-screen dark:mix-blend-screen rounded-full blur-[150px] opacity-50"></div>
+
+                                   <div class="border-animated my-15 md:w-full lg:max-w-[70%] rotate-[4.5deg] hover:rotate-0 duration-300">
+                                        <img src="./assets/img/yo1.jpeg" alt="foto de Andrés Vento" class="rounded-[38px] w-full">
+                                   </div>
+
+                              </div>
+                         </div>
+
+                         <!-- Footer Contenido -->
+                         <div class="inicio__footer text-darkSectionColor dark:text-whiteColor grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 py-20 px-6 sm:px-10 md:px-0">
+
+                              <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2 sm:gap-3 text-center sm:text-left">
+                                   <p class="contador font-audiowide text-4xl lg:text-7xl font-bold">4</p>
+                                   <p class="leading-tight sm:text-lg">
+                                        Años de 📆 <br> Experiencia.
+                                   </p>
+                              </div>
+
+                              <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2 sm:gap-3 text-center sm:text-left">
+                                   <p class="contador font-audiowide text-4xl lg:text-7xl font-bold">12+</p>
+                                   <p class="leading-tight sm:text-lg">
+                                        Proyectos 🚀 <br> Completados. 
+                                   </p>
+                              </div>
+
+                              <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2 sm:gap-3 text-center sm:text-left">
+                                   <p class="contador font-audiowide text-4xl lg:text-7xl font-bold">10</p>
+                                   <p class="leading-tight sm:text-lg">
+                                        Tecnologías <br> Usadas. 💻
+                                   </p>
+                              </div>
+
+                              <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2 sm:gap-3 text-center sm:text-left">
+                                   <p class="contador font-audiowide text-4xl lg:text-7xl font-bold">100%</p>
+                                   <p class="leading-tight sm:text-lg">
+                                        Profesional y Comprometido.
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="absolute left-0 bottom-[-2%] w-80 h-80 bg-primaryColorLight mix-blend-screen dark:mix-blend-screen  rounded-full blur-[150px] opacity-50"></div>
+               </section>
+
+               <!--============== PROYECTOS ==============-->
+               <!-- NOTA: Agregar ventanas modales para los proyectos, y mejorar el estilo de las cards -->
+               <section id="proyectos" class="container overflow-x-clip" >
+
+                    <div class="proyectos__top flex flex-col items-center gap-5 text-center">
+                         <h2 class="subtitle">Trabajos más Destacados</h2>
+                         <p class="max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl pb-10 text-center">
+                              Transformamos tus ideas y deseos en un proyecto web distintivo que te inspire tanto a ti como a tus clientes.
+                         </p>
+                    </div>
+
+                    <div class="proyectos__taps relative w-full max-w-full sm:w-max mx-auto my-10 h-10 text-[11px] sm:text-xs grid grid-cols-4 items-center px-[3px] rounded-full bg-white dark:bg-darkSectionColor border border-primaryColor overflow-hidden transition md:h-12 md:text-base">
+
+                         <!-- indicador -->
+                         <div class="indicador absolute h-9 my-auto top-0 bottom-0 left-0 rounded-full bg-primaryColorLight transition md:h-11"></div>
+
+                         <button class="tab relative block h-8 px-3 rounded-full text-whiteColor md:h-10 md:px-6" data-tabs="todos">Todos</button>
+
+                         <button class="tab relative block h-8 px-3 rounded-full md:h-10 md:px-6" data-tabs="frontend">Frontend</button>
+
+                         <button class="tab relative block h-8 px-3 rounded-full md:h-10 md:px-6" data-tabs="backend">Backend</button>
+
+                         <button class="tab relative block h-8 px-3 rounded-full md:h-10 md:px-6" data-tabs="mobile">Mobile</button>
+                    </div>
+
+                    <div class="mt-6 relative rounded-3xl overflow-x-clip">
+                         <!-- blob -->
+                         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-100 h-100 max-w-[90vw] bg-primaryColorLight dark:bg-primaryColorLight mix-blend-screen dark:mix-blend-screen rounded-full blur-[150px] opacity-50 pointer-events-none"></div>
+
+                         <ul class="grid grid-cols-1 gap-5 lg:gap-10 md:grid-cols-2">
+
+                              <!-- Frontend -->
+                              <li class="work_card frontend relative bg-sectionColor dark:bg-darkSectionColor p-5 rounded-2xl border border-transparent hover:border-primaryColor duration-300 overflow-hidden lg:p-8">
+
+                                   <img src="./assets/img/project-1.jpg" loading="lazy" alt="recent works" class="w-full" >
+
+                                   <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+
+                                        <div class="flex items-center justify-between bg-gradient-to-r from-primaryColorLight to-primaryColor text-whiteColor p-5 rounded-t-2xl">
+
+                                             <div>
+                                                  <p class="text-2xl font-bold lg:text-3xl">Proyecto 1 </p>
+                                                  <p> Este es el primer proyecto de mi portafolio frontend</p>
+                                             </div>
+
+                                             <div class="text-2xl rotate-45">
+                                                  <i class="fa-solid fa-arrow-right-long"></i>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </li>
+
+                              <li class="work_card frontend relative bg-sectionColor dark:bg-darkSectionColor p-5 rounded-2xl border border-transparent hover:border-primaryColor duration-300 overflow-hidden lg:p-8">
+
+                                   <img src="./assets/img/project-2.jpg" loading="lazy" alt="recent works">
+
+                                   <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+
+                                        <div class="flex items-center justify-between bg-gradient-to-r from-primaryColorLight to-primaryColor text-whiteColor p-5 rounded-t-2xl">
+
+                                             <div>
+                                                  <p class="text-2xl font-bold lg:text-3xl">Proyecto 1 </p>
+                                                  <p> Este es el primer proyecto de mi portafolio frontend</p>
+                                             </div>
+
+                                             <div class="text-2xl rotate-45">
+                                                  <i class="fa-solid fa-arrow-right-long"></i>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </li>
+
+                              <!-- Backend -->
+                              <li class="work_card backend relative bg-sectionColor dark:bg-darkSectionColor p-5 rounded-2xl border border-transparent hover:border-primaryColor duration-300 overflow-hidden lg:p-8">
+
+                                   <img src="./assets/img/project-3.jpg" loading="lazy" alt="recent works">
+
+                                   <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+
+                                        <div class="flex items-center justify-between bg-gradient-to-r from-primaryColorLight to-primaryColor text-whiteColor p-5 rounded-t-2xl">
+
+                                             <div>
+                                                  <p class="text-2xl font-bold lg:text-3xl">Proyecto 1 </p>
+                                                  <p> Este es el primer proyecto de mi portafolio frontend</p>
+                                             </div>
+
+                                             <div class="text-2xl rotate-45">
+                                                  <i class="fa-solid fa-arrow-right-long"></i>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </li>
+
+                              <li class="work_card backend relative bg-sectionColor dark:bg-darkSectionColor p-5 rounded-2xl border border-transparent hover:border-primaryColor duration-300 overflow-hidden lg:p-8">
+
+                                   <img src="./assets/img/project-4.jpg" loading="lazy" alt="recent works">
+
+                                   <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+
+                                        <div class="flex items-center justify-between bg-gradient-to-r from-primaryColorLight to-primaryColor text-whiteColor p-5 rounded-t-2xl">
+
+                                             <div>
+                                                  <p class="text-2xl font-bold lg:text-3xl">Proyecto 1 </p>
+                                                  <p> Este es el primer proyecto de mi portafolio frontend</p>
+                                             </div>
+
+                                             <div class="text-2xl rotate-45">
+                                                  <i class="fa-solid fa-arrow-right-long"></i>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </li>
+                              <!-- Frontend -->
+                              <li class="work_card mobile relative bg-sectionColor dark:bg-darkSectionColor p-5 rounded-2xl border border-transparent hover:border-primaryColor duration-300 overflow-hidden lg:p-8">
+
+                                   <img src="./assets/img/project-5.jpg" loading="lazy" alt="recent works">
+
+                                   <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+
+                                        <div class="flex items-center justify-between bg-gradient-to-r from-primaryColorLight to-primaryColor text-whiteColor p-5 rounded-t-2xl">
+
+                                             <div>
+                                                  <p class="text-2xl font-bold lg:text-3xl">Proyecto 1 </p>
+                                                  <p> Este es el primer proyecto de mi portafolio frontend</p>
+                                             </div>
+
+                                             <div class="text-2xl rotate-45">
+                                                  <i class="fa-solid fa-arrow-right-long"></i>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </li>
+                              <!-- Mobile -->
+                              <li class="work_card mobile relative bg-sectionColor dark:bg-darkSectionColor p-5 rounded-2xl border border-transparent hover:border-primaryColor duration-300 overflow-hidden lg:p-8">
+
+                                   <img src="./assets/img/project-2.jpg" loading="lazy" alt="recent works">
+
+                                   <div class="absolute left-0 right-0 bottom-[-100%] p-5 lg:p-8">
+
+                                        <div class="flex items-center justify-between bg-gradient-to-r from-primaryColorLight to-primaryColor text-whiteColor p-5 rounded-t-2xl">
+
+                                             <div>
+                                                  <p class="text-2xl font-bold lg:text-3xl">Proyecto 1 </p>
+                                                  <p> Este es el primer proyecto de mi portafolio frontend</p>
+                                             </div>
+
+                                             <div class="text-2xl rotate-45">
+                                                  <i class="fa-solid fa-arrow-right-long"></i>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </li>
+                         </ul>
+                    </div>
+               </section>
+
+               <!--============== SOBRE MÍ ==============-->
+               <section id="sobre_mi" class="container">
+                    <div class="proyectos__top flex flex-col items-center gap-5 text-center">
+                         <h2 class="subtitle">Sobre Mí</h2>
+                         <p class="max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl pb-10 text-center">
+                              Transformamos tus ideas y deseos en un proyecto web distintivo que te inspire tanto a ti como a tus clientes.
+                         </p>
+                         <div class="relative flex justify-center md:hidden">
+
+                              <img src="./assets/img/yo1.jpeg" alt="Foto de Andrés Vento" loading="lazy" class=" my-10 max-w-[70%] duration-300 origin-center rotate-[4.5deg] border-4 border-primaryColor rounded-[38px] hover:rotate-0 hover:border-primaryColorLight">
+                         </div>
+                    </div>
+               </section>
+
+               <!--============== MIS SKILLS ==============--> 
+               <section id="skills" class="container" > 
+                    <!-- Particles.JS -->
+                    <div id="particlesJS" class="absolute inset-0 w-full h-full z-0"></div>
+                    <div class="skills__top flex flex-col items-center gap-5 text-center"> 
+                         <h2 class="subtitle">My Skills</h2> 
+                         <p class="max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl pb-10 text-center">
+                              Estas son las tecnologías con las que tengo mayor experiencia; sin embargo, me adapto fácilmente a nuevas herramientas y entornos. 
+                         </p> 
+                    </div> 
+
+                    <!-- ===== SLIDER STACKS ===== -->
+                    <div class="skills_slider overflow-hidden">
+                         <div class="skills_track flex gap-5">
+                              <!-- ===== GRUPO ORIGINAL ===== -->
+                              <div class="skills_group flex">
+                                   <!-- HTML LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/html.svg" loading="lazy" alt="HTML-5" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  HTML
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- CSS LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/css-3.svg" loading="lazy" alt="CSS-3" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  CSS
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- SASS LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/sass.svg" loading="lazy" alt="Sass" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  SASS
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- JS LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/javascript.svg" loading="lazy" alt="JavaScript" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  JavaScript
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- ReactJS LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/react.svg" loading="lazy" alt="ReactJS" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  ReactJS
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- NodeJS LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/nodejs.svg" loading="lazy" alt="NodeJS" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  NodeJS
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- PYTHON LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/python.svg" loading="lazy" alt="Python" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  Python
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- JAVA LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/java.svg" loading="lazy" alt="Java" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  Java
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- MySQL LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/mysql.svg" loading="lazy" alt="MySQL" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  MySQL
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- PostgresSQL LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/postgresql.svg" loading="lazy" alt="PostgresSQL" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  PostgresSQL
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- Git LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/git.svg" loading="lazy" alt="Git" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  Git
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- GitHub LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/github.svg" loading="lazy" alt="GitHub" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  GitHub
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- PHP LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/php.svg" loading="lazy" alt="PHP" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  PHP
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- WordPress LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/wordpress.svg" loading="lazy" alt="WordPress" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  WordPress
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- Linux LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/linux.svg" loading="lazy" alt="Linux" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  Linux
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- Bash LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/bash.svg" loading="lazy" alt="Bash" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  Bash
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                              </div>
+
+                              <!-- ===== GRUPO DUPLICADO ===== -->
+                              <div class="skills_group flex">
+                                   
+                                   <!-- HTML LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/html.svg" loading="lazy" alt="HTML-5" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  HTML
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- CSS LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/css-3.svg" loading="lazy" alt="CSS-3" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  CSS
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- SASS LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/sass.svg" loading="lazy" alt="Sass" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  SASS
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- JS LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/javascript.svg" loading="lazy" alt="JavaScript" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  JavaScript
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- ReactJS LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/react.svg" loading="lazy" alt="ReactJS" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  ReactJS
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- NodeJS LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/nodejs.svg" loading="lazy" alt="NodeJS" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  NodeJS
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- PYTHON LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/python.svg" loading="lazy" alt="Python" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  Python
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- JAVA LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/java.svg" loading="lazy" alt="Java" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  Java
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- MySQL LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/mysql.svg" loading="lazy" alt="MySQL" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  MySQL
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- PostgresSQL LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/postgresql.svg" loading="lazy" alt="PostgresSQL" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  PostgresSQL
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- Git LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/git.svg" loading="lazy" alt="Git" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  Git
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- GitHub LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/github.svg" loading="lazy" alt="GitHub" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  GitHub
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- PHP LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/php.svg" loading="lazy" alt="PHP" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  PHP
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- WordPress LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/wordpress.svg" loading="lazy" alt="WordPress" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  WordPress
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- Linux LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/linux.svg" loading="lazy" alt="Linux" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  Linux
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                                   <!-- Bash LOGO/ICONO --> 
+                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <div class="bg-sectionColor dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor border border-transparent hover:border-primaryColorLight duration-300"> 
+                                             <img src="./assets/img/bash.svg" loading="lazy" alt="Bash" class="max-w-16"> 
+                                             <p class="text-center text-xl text-black dark:text-white">
+                                                  Bash
+                                             </p> 
+                                        </div> 
+                                   </div> 
+                              </div>
+                         </div>
+                    </div>
+               </section>
+
+               <!--============== CURRICULUM ==============-->
+               <!-- NOTA: Mejorar la sintesis curricular, agrgar los certificados aqui MODIFICAR -->
+               <section id="curriculum" >
+                    <div class="container w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                         <!-- Experiencia -->
+                          <div>
+                              <div class="cv__top flex items-center gap-3">
+                                   <div class="subtitle text-2xl md:text-3xl lg:text-4xl">
+                                        <i class="fa-solid fa-briefcase"></i>
+                                   </div>
+                                   <h2 class="subtitle">Experiencia</h2>
+                              </div>
+
+                              <div class="my-10 space-y-5 md:space-y-10">
+
+                                   <!-- card 1 -->
+                                    <div class="cv_card cv_edu_card bg-white dark:bg-darkBodyColor p-5 rounded-2xl hover:bg-primaryColorLight dark:hover:bg-primaryColorLight duration-300" >
+                                        <p class="text-primaryColorLight text-sm font-bold pb-3">Sep - Dic 2025</p>
+                                        <p class="text-lg font-bold uppercase lg:text-2xl xl:text-3xl pb-2">Pasantias en Programación</p>
+                                        <p class="">Agencia Bolivariana para Actividades Espaciales - ABAE, Miranda</p>
+                                    </div>
+
+                                   <!-- card 2 -->
+                                   <div class="cv_card cv_edu_card bg-white dark:bg-darkBodyColor p-5 rounded-2xl hover:bg-primaryColorLight dark:hover:bg-primaryColorLight duration-300" >
+                                        <p class="text-primaryColorLight text-sm font-bold pb-3">Sep - Dic 2025</p>
+                                        <p class="text-lg font-bold uppercase lg:text-2xl xl:text-3xl pb-2">Pasantias en Programación</p>
+                                        <p class="">Agencia Bolivariana para Actividades Espaciales - ABAE, Miranda</p>
+                                   </div>
+                                   <!-- card 3 -->
+                                   <div class="cv_card cv_edu_card bg-white dark:bg-darkBodyColor p-5 rounded-2xl hover:bg-primaryColorLight dark:hover:bg-primaryColorLight duration-300" >
+                                        <p class="text-primaryColorLight text-sm font-bold pb-3">Sep - Dic 2025</p>
+                                        <p class="text-lg font-bold uppercase lg:text-2xl xl:text-3xl pb-2">Pasantias en Programación</p>
+                                        <p class="">Agencia Bolivariana para Actividades Espaciales - ABAE, Miranda</p>
+                                   </div>
+                              </div>
+                          </div>
+
+                         <!-- Educación -->
+                         <div>
+                              <div class="estudios__top flex items-center gap-3">
+                                   <div class="subtitle text-2xl md:text-3xl lg:text-4xl">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                   </div>
+                                   <h2 class="subtitle">Estudios</h2>
+                              </div>
+                              <div class="my-10 space-y-5 md:space-y-10">
+                                   <!-- card 1 -->
+                                   <div class="estudios_card cv_edu_card bg-white dark:bg-darkBodyColor p-5 rounded-2xl hover:bg-primaryColorLight dark:hover:bg-primaryColorLight duration-300" >
+                                        <p class="text-primaryColorLight text-sm font-bold pb-3">Sep - Dic 2025</p>
+                                        <p class="text-lg font-bold uppercase lg:text-2xl xl:text-3xl pb-2">Pasantias en Programación</p>
+                                        <p class="">Agencia Bolivariana para Actividades Espaciales - ABAE, Miranda</p>
+                                   </div>
+
+                                   <!-- card 2 -->
+                                   <div class="estudios_card cv_edu_card bg-white dark:bg-darkBodyColor p-5 rounded-2xl hover:bg-primaryColorLight dark:hover:bg-primaryColorLight duration-300" >
+                                        <p class="text-primaryColorLight text-sm font-bold pb-3">Sep - Dic 2025</p>
+                                        <p class="text-lg font-bold uppercase lg:text-2xl xl:text-3xl pb-2">Pasantias en Programación</p>
+                                        <p class="">Agencia Bolivariana para Actividades Espaciales - ABAE, Miranda</p>
+                                   </div>
+                                   <!-- card 3 -->
+                                   <div class="estudios_card cv_edu_card bg-white dark:bg-darkBodyColor p-5 rounded-2xl hover:bg-primaryColorLight dark:hover:bg-primaryColorLight duration-300" >
+                                        <p class="text-primaryColorLight text-sm font-bold pb-3">Sep - Dic 2025</p>
+                                        <p class="text-lg font-bold uppercase lg:text-2xl xl:text-3xl pb-2">Pasantias en Programación</p>
+                                        <p class="">Agencia Bolivariana para Actividades Espaciales - ABAE, Miranda</p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+
+               <!--============== SERVICIOS ==============-->
+               <!-- NOTA: Redactar mejor los Servicios -->
+               <section id="servicios" class="relative overflow-x-clip">
+
+                    <div class="absolute right-0 top-[10%] w-80 h-80 bg-primaryColorLight mix-blend-screen dark:mix-blend-screen  rounded-full blur-[150px] opacity-50"></div>
+                    
+                    <div class="container">
+
+                         <div class="servicio__top flex flex-col items-center gap-5 text-center">
+                              <h2 class="subtitle font-bold">Mis Servicios de Calidad</h2>
+                              <p class="max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl pb-10 text-center">
+                                   Desarrollo proyectos web partiendo de tus ideas, cuidando cada detalle y pensando en tus clientes.
+                              </p>
+                         </div>
+
+                         <!-- Lista de servicios -->
+                         <div class="my-10">
+                              <!-- 1er Elemento de la lista de servicios -->
+                              <div class="servicio__elemento">
+                                   <div class="text-2xl font-bold flex items-center gap-3 md:text-2xl md:w-[40%]">
+                                        <p class="text-primaryColorLight hover:text-whiteColor">01</p>
+                                        <p>Diseño de Marcas</p>
+                                   </div>
+                                   <div class="ml-auto text-2xl origin-center rotate-45 md:order-last">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                   </div>
+
+                                   <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
+                                        <p>
+                                             Analizo los desafíos complejos de la experiencia del usuario para idear soluciones que prioricen la integridad.
+                                        </p>
+                                   </div>
+                              </div>
+                              <!-- 2do Elemento de la lista de servicios -->
+                              <div class="servicio__elemento">
+                                   <div class="text-2xl font-bold flex items-center gap-3 md:text-2xl md:w-[40%]">
+                                        <p class="text-primaryColorLight hover:text-whiteColor">02</p>
+                                        <p>Diseño web</p>
+                                   </div>
+                                   <div class="ml-auto text-2xl origin-center rotate-45 md:order-last">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                   </div>
+
+                                   <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
+                                        <p>
+                                             Analizo los desafíos complejos de la experiencia del usuario para idear soluciones que prioricen la integridad.
+                                        </p>
+                                   </div>
+                              </div>
+                              <!-- 3er Elemento de la lista de servicios -->
+                              <div class="servicio__elemento">
+                                   <div class="text-2xl font-bold flex items-center gap-3 md:text-2xl md:w-[40%]">
+                                        <p class="text-primaryColorLight hover:text-whiteColor">03</p>
+                                        <p>Diseño UI/UX</p>
+                                   </div>
+                                   <div class="ml-auto text-2xl origin-center rotate-45 md:order-last">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                   </div>
+
+                                   <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
+                                        <p>
+                                             Analizo los desafíos complejos de la experiencia del usuario para idear soluciones que prioricen la integridad.
+                                        </p>
+                                   </div>
+                              </div>
+                              <!-- 4to Elemento de la lista de servicios -->
+                              <div class="servicio__elemento">
+                                   <div class="text-2xl font-bold flex items-center gap-3 md:text-2xl md:w-[40%]">
+                                        <p class="text-primaryColorLight hover:text-whiteColor">04</p>
+                                        <p>Diseño Gráfico</p>
+                                   </div>
+                                   <div class="ml-auto text-2xl origin-center rotate-45 md:order-last">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                   </div>
+
+                                   <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
+                                        <p class="text-">
+                                             Analizo los desafíos complejos de la experiencia del usuario para idear soluciones que prioricen la integridad.
+                                        </p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+
+               <!--============== TESTIMONIOS ==============-->
+               <section id="testimonios" class="bg-sectionColor dark:bg-darkBodyColor" >
+
+                    <div class="container">
+
+                         <div class="blog_top flex flex-col items-center gap-5 text-center">
+                              <h2 class="subtitle">Testimonios</h2>
+                              <p class="max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl pb-10 text-center">
+                                   Estas son las palabras de algunos de mis compañeros de trabajo y de clientes satisfechos, quienes han experimentado el impacto positivo de mis servicios en sus proyectos web.
+                              </p>
+                         </div>
+
+                         <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 px-5">
+
+                              <!-- card 1 -->
+                              <div class="blog_card relative overflow-hidden rounded-3xl cursor-pointer">
+                                   <img src="./assets/img/blog-1.jpg" loading="lazy" alt="primer testimonio">
+                                   <p class="absolute top-3 left-3 uppercase text-sm bg-primaryColorLight text-white py-2 px-3 rounded-full">
+                                        Tutorial
+                                   </p>
+                                   <div class="blog_card_info absolute left-0 ring-0 bottom-0 bg-whiteColor dark:bg-primaryColor mx-4 my-3 rounded-2xl space-y-2 p-3">
+                                        <div class="text-cyan-500 text-shadow-cyan-200 flex items-center gap-3">
+                                             <p> <i class="fa-solid fa-newspaper"></i> Oct 10, 2025</p>
+
+                                             <p><i class="fa-solid fa-comments"></i> 5 Comments</p>
+                                        </div>
+                                        <p class="text-xl font-bold capitalize">Lorem ipsum dolor sit amet consectetur. </p>
+                                   </div>
+                              </div>
+
+                              <!-- card 2 -->
+                              <div class="blog_card relative overflow-hidden rounded-3xl cursor-pointer">
+                                   <img src="./assets/img/blog-2.jpg" loading="lazy" alt="primer testimonio">
+                                   <p class="absolute top-3 left-3 uppercase text-sm bg-primaryColorLight text-white py-2 px-3 rounded-full">
+                                        Tutorial
+                                   </p>
+                                   <div class="blog_card_info absolute left-0 ring-0 bottom-0 bg-whiteColor dark:bg-primaryColor mx-4 my-3 rounded-2xl space-y-2 p-3">
+                                        <div class="text-cyan-500 text-shadow-cyan-200 flex items-center gap-3">
+                                             <p> <i class="fa-solid fa-newspaper"></i> Oct 10, 2025</p>
+
+                                             <p><i class="fa-solid fa-comments"></i> 5 Comments</p>
+                                        </div>
+                                        <p class="text-xl font-bold capitalize">Lorem ipsum dolor sit amet consectetur. </p>
+                                   </div>
+                              </div>
+
+                              <!-- card 3 -->
+                              <div class="blog_card relative overflow-hidden rounded-3xl cursor-pointer">
+                                   <img src="./assets/img/blog-3.jpg" loading="lazy" alt="primer testimonio">
+                                   <p class="absolute top-3 left-3 uppercase text-sm bg-primaryColorLight text-white py-2 px-3 rounded-full">
+                                        Tutorial
+                                   </p>
+                                   <div class="blog_card_info absolute left-0 ring-0 bottom-0 bg-whiteColor dark:bg-primaryColor mx-4 my-3 rounded-2xl space-y-2 p-3">
+                                        <div class="text-cyan-500 text-shadow-cyan-200 flex items-center gap-3">
+                                             <p> <i class="fa-solid fa-newspaper"></i> Oct 10, 2025</p>
+
+                                             <p><i class="fa-solid fa-comments"></i> 5 Comments</p>
+                                        </div>
+                                        <p class="text-xl font-bold capitalize">Lorem ipsum dolor sit amet consectetur. </p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+
+               <!--============== CONTACTO ==============-->
+               <section id="contacto" class="container">
+                    <div class="flex flex-col md:flex-row-reverse gap-15 md:gap-5">
+                         <!-- Información -->
+                         <div class="contacto_info flex-1 min-w-0 space-y-1 md:space-y-10 lg:pl-20 xl-pl-40">
+                              <!-- TELÉFONO -->
+                              <div class="flex items-start gap-4">
+                                   <div class="text-xl text-whiteColor bg-gradient-to-b from-primaryColor to-primaryColorLight h-9 w-9 lg:h-13 lg:w-13 rounded-full grid place-items-center">
+                                        <i class="fa-solid fa-phone"></i>
+                                   </div>
+
+                                   <div class="space-y-1">
+                                        <p class="text-md md:text-base">Teléfono:</p>
+                                        <p class="font-bold text-md md:text-lg inline-flex items-center gap-3 select-none" title="Copiar Teléfono">
+                                             <span class="numero hover:text-primaryColorLight duration-300">+58 424 *** ****</span>
+                                             <span class="copy-icon cursor-pointer rounded-full text-primaryColorLight hover:bg-primaryColorLight hover:text-whiteColor transition-all duration-300" data-copy="+58 424 217 1412" data-text="Teléfono">
+                                                  <i class="fa-solid fa-copy"></i>
+                                             </span>
+                                        </p>
+                                   </div>
+
+                              </div>
+                              <!-- CORREO -->
+                              <div class="flex items-start gap-4">
+
+                                   <div class="text-xl text-whiteColor bg-gradient-to-b from-primaryColor to-primaryColorLight h-9 w-9 lg:h-12 lg:w-12 rounded-full grid place-items-center">
+                                        <i class="fa-solid fa-envelope"></i>
+                                   </div>
+
+                                   <div>
+                                        <p class="text-md md:text-base">Correo:</p>
+                                        <p class="font-bold text-md md:text-lg inline-flex flex-wrap items-center gap-3 select-none max-w-full" title="Copiar Correo">
+                                             <span class="direccion-correo break-all hover:text-primaryColorLight duration-300">andresvento2004@gmail.com</span>
+                                             <span class="copy-icon cursor-pointer rounded-full text-primaryColorLight hover:bg-primaryColorLight hover:text-whiteColor transition-all duration-300" data-copy="andresvento2004@gmail.com" data-text="Correo">
+                                                  <i class="fa-solid fa-copy"></i>
+                                             </span>
+                                        </p>
+                                   </div>
+                              </div>
+                              <!-- DIRECCIÓN -->
+                              <div class="flex items-start gap-4">
+
+                                   <div class="text-xl text-whiteColor bg-gradient-to-b from-primaryColor to-primaryColorLight h-9 w-9 lg:h-12 lg:w-12 rounded-full grid place-items-center">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                   </div>
+
+                                   <div class="space-y-1">
+                                        <p class="text-md md:text-base">Dirección:</p>
+                                        <p class="font-bold text-md md:text-md inline-flex items-center gap-3 select-none hover:text-primaryColorLight duration-300 ">
+                                             Av. Principal de Manicomio <br> Municipio Libertador <br> Parroquia La Pastora.
+                                        </p>
+                                   </div>
+                              </div> 
+                         </div>
+
+
+                         <!-- Formulario de Contacto-->
+                         <form class="contacto_form flex-1 bg-sectionColor dark:bg-darkSectionColor border border-primaryColor px-5 py-10 rounded-3xl space-y-3">
+                              <!-- Subtitulo y Descripción -->
+                              <div class="flex flex-col md:flex-row items-center gap-3">
+                                   <h2 class="subtitle">Trabajemos Juntos! </h2>
+
+                              </div>
+
+                              <div class="space-y-3 mt-7">
+                                   <div class="flex flex-col md:flex-row items-center">
+                                        <label for="">Nombre y Apellido:</label>
+                                        <input type="text" placeholder="Juan Pérez" name="nombre-apellido-cliente" autocomplete="off">
+
+                                        <label for="">Asunto:</label>
+                                        <input type="text" placeholder="Necesito una Web" name="asunto-cliente" autocomplete="off">
+                                   </div>
+
+                                   <div class="flex flex-col md:flex-row items-center">
+                                        <label for="">Correo:</label>
+                                        <input type="email" placeholder="juanperez@doe.com" name="correo-cliente" autocomplete="off">
+
+                                        <label for="">Teléfono:</label>
+                                        <input type="tel" placeholder="+58 416 222 5555" name="telefono-cliente" autocomplete="off">
+                                   </div>
+                              </div>
+
+                              <div class="space-y-3">
+
+                                   <label for="">Tu mensaje:</label>
+
+                                   <textarea name="mensaje" rows="5" placeholder="Requiero una pagina web desarrollada en WordPress y Php"></textarea>
+
+                                   <button class="btn">
+                                        <span class="z-10">Enviar <i class="fa-solid fa-paper-plane"></i></span> 
+                                   </button>
+                              </div>
+                         </form>
+                    </div>
+               </section>
+          </main>
+
+          <!--============== FOOTER ==============-->
+          <footer id="footer" class="bg-sectionColor dark:bg-darkSectionColor py-10">
+               <div class="container flex flex-col items-center gap-5">
+                    <div class="py-5">
+
+                         <!-- Logo modo Light -->
+                         <img src="./assets/img/logo.png" loading="lazy" alt="logo" class="w-28 md:w-40 hidden dark:block " >
+                         <!-- Logo modo Dark -->
+                         <img src="./assets/img/logoBlack.png" loading="lazy" alt="black_logo" class="w-28 md:w-40 dark:hidden" >
+
+                    </div>
+                    <div>
+                         <ul class="flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
+                              <li>
+                                   <a href="#proyectos" class="nav-link text-primaryColor dark:text-whiteColor">Proyectos</a>
+                              </li>
+                              <li>
+                                   <a href="#sobre_mi" class="nav-link text-primaryColor dark:text-whiteColor">Sobre Mí</a>
+                              </li>
+                              <li>
+                                   <a href="#skills" class="nav-link text-primaryColor dark:text-whiteColor">Skills</a>
+                              </li>
+                              <li>
+                                   <a href="#curriculum" class="nav-link text-primaryColor dark:text-whiteColor">Currículum</a>
+                              </li>
+                              <li>
+                                   <a href="#servicios" class="nav-link text-primaryColor dark:text-whiteColor">Servicios</a>
+                              </li>
+                              <li>
+                                   <a href="#testimonios" class="nav-link text-primaryColor dark:text-whiteColor">Testimonios</a>
+                              </li>
+                               <li>
+                                   <a href="#contacto" class="nav-link text-primaryColor dark:text-whiteColor">Contacto</a>
+                              </li>
+                         </ul>
+                    </div>
+                    <div class="text-primaryColorLight">
+                         <p>&copy; 2024 Hecho a mano con mucho ❤️ por <span class="font-bold">Andrés. E. Vento. C.</span></p>
+                    </div>
+               </div>
+          </footer>
+
+          <!--============== BOTON DE SCROLL-UP (FAB)  ==============-->
+          <button type="button" id="scroll-up" class="scroll-fab group fixed right-5 z-50 flex h-14 w-14 -translate-y-3 scale-90 cursor-pointer items-center justify-center rounded-full border-0 p-0 text-whiteColor opacity-0 transition-[bottom,opacity,transform] duration-150 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primaryColorLight focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-darkBodyColor active:scale-95 pointer-events-none -bottom-28 md:right-8 md:h-16 md:w-16" aria-label="Volver al inicio de la página">
+               <span class="scroll-fab-glow" aria-hidden="true"></span>
+               <span class="scroll-fab-face">
+                    <i class="fa-solid fa-angles-up scroll-fab-icon text-lg md:text-xl" aria-hidden="true"></i>
+               </span>
+          </button>
+
+          <!--============== SCRIPT JS PARTICLES-JS ==============-->
+          <script src="./src/js/particles.min.js"></script>
+          <!--============== SCROLL REVEAL ==============-->
+          <script src="https://unpkg.com/scrollreveal"></script> 
+          <!--============== SCRIPT JS ==============-->
+          <script src="./src/js/main.js"></script>
+     </body>
+</html>

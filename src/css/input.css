@@ -1,0 +1,376 @@
+@config "../../tailwind.config.js";
+
+@import "tailwindcss";
+
+@layer base {
+     html {
+          @apply scroll-smooth overflow-x-clip;
+     }
+     body {
+     @apply bg-white dark:bg-darkBodyColor text-black dark:text-textColor font-poppins tracking-wide overflow-x-clip;
+     }         
+
+     h1, h2, h3, h4, h5, h6 {
+          @apply font-audiowide ;
+     }
+
+     section {
+          @apply py-16 md:pt-28 md:pb-20;
+     }
+
+     input,
+     textarea {
+          @apply w-full dark:bg-darkBodyColor border border-gray-800 px-4 py-3 rounded-lg;
+     }
+
+     input:focus,
+     input:active 
+     textarea:focus,
+     textarea:active {
+          @apply outline-none border-primaryColorLight;
+     }
+}
+
+@layer components {
+     .nav-link {
+          @apply relative font-bold text-textColor lg:text-primaryColor dark:text-textColor;
+     }
+     .nav-link::before {
+          content: "";
+          @apply absolute w-full h-[2.6px] bg-gradient-to-r from-primaryColorLight to-primaryColor -bottom-[5px] left-0 scale-x-0 origin-left transition-transform ease-in-out origin-right duration-500;
+     }
+
+     .active::before,
+     .nav-link:hover::before {
+          @apply scale-x-100 origin-left;
+     }
+     .btn {
+          @apply relative overflow-hidden bg-gradient-to-r from-primaryColorLight to-primaryColor text-whiteColor px-7 py-3 rounded-full capitalize font-bold flex justify-center items-center;
+     }
+     .btn::before {
+          content: "";
+          @apply absolute inset-0 rounded-full bg-gradient-to-r from-primaryColor to-primaryColorLight scale-x-0 origin-right transition-transform duration-300 ease-in-out z-0;
+     }
+     .btn:hover::before {
+          @apply scale-x-100 origin-left;
+     }
+     .btn_outline {
+          @apply inline-flex items-center justify-center gap-2 h-11 border border-primaryColorLight text-primaryColorLight py-2 px-4 rounded-full  hover:bg-primaryColorLight hover:text-whiteColor duration-300 cursor-pointer whitespace-nowrap;
+     }
+     .title {
+          @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[75px] font-bold bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-800 dark:from-blue-300 dark:via-cyan-500 dark:to-blue-600 inline-block text-transparent bg-clip-text pb-2;
+     }
+     .subtitle {
+          @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-800 dark:from-blue-300 dark:via-cyan-500 dark:to-blue-600 inline-block text-transparent bg-clip-text pb-3;
+     }
+}
+
+@layer utilities {
+     .social-icon {
+          @apply relative border border-primaryColorLight text-primaryColorLight h-11 w-11 rounded-full grid place-items-center cursor-pointer hover:text-whiteColor duration-300;
+     }
+
+     .social-icon::before {
+          content: "";
+          @apply absolute w-[100%] h-[100%] bg-primaryColorLight inset-0 rounded-full scale-0 transition-transform ease-in-out z-0 duration-300;
+     }
+
+     .social-icon:hover::before {
+          @apply scale-100 origin-center;
+     }
+
+     .social-icon > * {
+          @apply relative z-10;
+     }
+
+     /* Seccion de Servicios */
+     .servicio__elemento{
+          @apply flex flex-wrap items-center gap-3 px-4 py-8 border-b border-primaryColorLight hover:bg-primaryColorLight cursor-pointer duration-300;
+     }
+
+     .servicio__elemento div p {
+          @apply duration-300;
+     }
+
+     .servicio__elemento:hover div p {
+          @apply text-whiteColor;
+     }
+
+     .servicio__elemento div i {
+          @apply duration-300;
+     }
+
+     .servicio__elemento:hover div i {
+          @apply text-whiteColor -rotate-90;
+     }
+
+     /* .indicador */
+     .indicador {
+          @apply transition-all duration-300;
+     }
+
+     .work_card > div {
+          @apply duration-500;
+     }
+
+     .work_card:hover > div {
+          @apply bottom-0;
+     }
+
+     .work_card div i {
+          @apply duration-300 delay-300;
+     }
+
+     .work_card:hover > div i {
+          @apply -rotate-90;
+     }
+
+     .cv_edu_card,
+     .cv_edu_card > p {
+          @apply duration-300;
+     }
+
+     .cv_edu_card:hover,
+     .cv_edu_card:hover > p {
+          @apply text-whiteColor;
+     }
+
+     /* Mis Skills  */
+     .skills_card img {
+          @apply duration-300;
+     }
+
+     .skills_card:hover img {
+          @apply scale-130;
+     }
+
+     .skills_card:hover p {
+          @apply text-whiteColor
+     }
+     .skills_slider {
+          overflow: hidden;
+          width: 100%;
+     }
+
+     .skills_track {
+          display: flex;
+          width: max-content;
+          animation: scrollSkills 20s linear infinite;
+     }
+
+     .skills_group {
+          display: flex;
+          gap: 2rem;
+     }
+
+     /* Animación infinita */
+     @keyframes scrollSkills {
+     from {
+          transform: translateX(0);  
+     }
+     to {
+          transform: translateX(-50%);
+          }
+     }
+
+     /* Pausar cuando el usuario interactúa */
+     .skills_slider:hover .skills_track {
+          animation-play-state: paused;
+     }
+
+     /* Sección de Blog Temporal */
+     .blog_card img{
+          @apply w-full duration-300;
+     }
+
+     .blog_card:hover img {
+          @apply scale-110;
+     }
+
+     .blog_card div,
+     .blog_card .blog_card_info p {
+          @apply duration-300
+     }
+
+     .blog_card:hover .blog_card_info {
+          @apply bg-primaryColor text-whiteColor;
+     }
+
+     .blog_card:hover .blog_card_info p {
+          @apply text-whiteColor;
+     }
+
+     /* Botón flotante “volver arriba”: FAB, no enlace */
+     .scroll-fab {
+          isolation: isolate;
+          -webkit-tap-highlight-color: transparent;
+     }
+
+     .scroll-fab .scroll-fab-glow {
+          position: absolute;
+          inset: -6px;
+          border-radius: 9999px;
+          background: linear-gradient(
+               135deg,
+               hsl(209, 74%, 52%),
+               hsl(209, 87%, 28%)
+          );
+          opacity: 0.4;
+          filter: blur(14px);
+          z-index: -1;
+          pointer-events: none;
+          transition: opacity 0.45s ease, transform 0.45s ease;
+     }
+
+     .scroll-fab:hover .scroll-fab-glow {
+          opacity: 0.65;
+          transform: scale(1.06);
+     }
+
+     .scroll-fab:active .scroll-fab-glow {
+          opacity: 0.5;
+          transform: scale(0.98);
+     }
+
+     .scroll-fab .scroll-fab-face {
+          position: relative;
+          display: flex;
+          height: 100%;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          border-radius: 9999px;
+          background: linear-gradient(
+               155deg,
+               hsl(209, 74%, 46%) 0%,
+               hsl(209, 87%, 24%) 100%
+          );
+          border: 1px solid rgba(255, 255, 255, 0.24);
+          box-shadow:
+               inset 0 1px 0 rgba(255, 255, 255, 0.2),
+               0 6px 28px rgba(12, 55, 105, 0.45);
+     }
+
+     .scroll-fab .scroll-fab-icon {
+          transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+     }
+
+     .scroll-fab--on .scroll-fab-icon {
+          animation: scroll-fab-bob 2.4s ease-in-out infinite;
+     }
+
+     .scroll-fab:active .scroll-fab-icon {
+          animation: none;
+          transform: translateY(-2px) scale(0.88);
+     }
+}
+
+@keyframes scroll-fab-bob {
+     0%,
+     100% {
+          transform: translateY(0);
+     }
+     50% {
+          transform: translateY(-5px);
+     }
+}
+
+/* Animación de Aterta */
+@keyframes fadeInOut {
+     0% { opacity: 0; transform: translateY(-20px); }
+     10%, 90% { opacity: 1; transform: translateY(0); }
+     100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.animate-fadeInOut {
+     animation: fadeInOut 2s ease forwards;
+}
+
+
+/*===== ESTILO BARRA DE SCROLL ====*/
+::-webkit-scrollbar {
+     width: 9px;
+}
+
+::-webkit-scrollbar-track {
+     background: #3f52861a;
+}
+
+::-webkit-scrollbar-thumb {
+     background: linear-gradient(
+          to bottom,
+          #1b62d4,
+          #069ad4,
+          #1e40af
+     );
+     border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+     background: linear-gradient(
+          to bottom,
+          #60a5fa,
+          #22d3ee,
+          #2563eb
+     );
+}
+
+/*~~~~~~~~~~~~~~~ BORDER ANIMADO DE IMAGENPRO (DOBLE LUZ) ~~~~~~~~~~~~~~~*/
+
+@layer utilities {
+
+     .border-animated {
+          @apply relative flex items-center justify-center;
+          padding: 6px; /* Este es el grosor del borde */
+          background: #000814; /* El azul oscuro que pediste */
+          border-radius: 44px; /* Un poco más que la imagen */
+          overflow: hidden; /* Corta las luces para que solo se vean en el borde */
+     }
+
+     /* LUZ 1 (Cian) */
+     .border-animated::before {
+          content: "";
+          position: absolute;
+          width: 150%;
+          height: 150%;
+          background: radial-gradient(circle, #3192ec 5%, transparent 25%);
+          animation: orbit1 5s linear infinite;
+          z-index: 1;
+          filter: blur(5px);
+     }
+
+     /* LUZ 2 (Azul Eléctrico) */
+     .border-animated::after {
+          content: "";
+          position: absolute;
+          width: 150%;
+          height: 150%;
+          background: radial-gradient(circle, #3192ec 5%, transparent 25%);
+          animation: orbit2 5s linear infinite;
+          z-index: 1;
+          filter: blur(5px);
+     }
+
+     /* CAPA NEGRA PARA "HUECO" DEL BORDE */
+     .inner-mask {
+          @apply absolute inset-[4px] bg-[#020617] z-[2];
+          border-radius: 38px;
+     }
+
+     /* IMAGEN */
+     .border-animated img {
+          @apply relative z-10 w-full h-auto block;
+          border-radius: 38px;
+     }
+}
+
+/* ANIMACIONES DE ÓRBITA */
+@keyframes orbit1 {
+     0% { transform: rotate(0deg) translate(40%) rotate(0deg); }
+     100% { transform: rotate(360deg) translate(40%) rotate(-360deg); }
+}
+
+@keyframes orbit2 {
+     0% { transform: rotate(180deg) translate(40%) rotate(-180deg); }
+     100% { transform: rotate(540deg) translate(40%) rotate(-540deg); }
+}
