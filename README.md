@@ -122,7 +122,7 @@ Este proyecto está bajo la Licencia ISC.
 ## 📞 Contacto
 
 **Andrés E. Vento C**
-- Email: [tu-email@ejemplo.com](mailto:tu-email@ejemplo.com)
+- Email: [andresvento2004@gmail.com](mailto:andresvento2004@gmail.com)
 - LinkedIn: [linkedin.com/in/andres-vento](https://linkedin.com/in/andres-vento)
 - GitHub: [github.com/andres-vento](https://github.com/andres-vento)
 
