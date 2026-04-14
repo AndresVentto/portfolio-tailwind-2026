@@ -124,7 +124,7 @@ Este proyecto está bajo la Licencia ISC.
 **Andrés E. Vento C**
 - Email: [andresvento2004@gmail.com](mailto:andresvento2004@gmail.com)
 - LinkedIn: [linkedin.com/in/andres-vento](https://linkedin.com/in/andres-vento)
-- GitHub: [github.com/andres-vento](https://github.com/andres-vento)
+- GitHub: [https://github.com/andres-vento](https://github.com/AndresVentto)
 
 ---
 
