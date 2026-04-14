@@ -56,32 +56,14 @@ portfolio-AndresVento-2026/
 └── README.md               # Este archivo
 ```
 
-## 🚀 Instalación y Uso
-
-### Prerrequisitos
-- Node.js (versión 16 o superior)
-- npm o yarn
-
-### Instalación
-```bash
-# Clona el repositorio
-git clone https://github.com/tu-usuario/portfolio-AndresVento-2026.git
-
-# Entra al directorio del proyecto
-cd portfolio-AndresVento-2026
-
-# Instala las dependencias
-npm install
-```
-
-### Desarrollo
+### 💻 Desarrollo
 ```bash
 # Inicia el modo desarrollo con watch
 npm run dev
 ```
 Abre `public/index.html` en tu navegador o usa una extensión como Live Server.
 
-### Producción
+### 🚀 Producción
 ```bash
 # Compila y copia todos los archivos a dist/
 npm run build:all
