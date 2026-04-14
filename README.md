@@ -34,8 +34,8 @@ Un portafolio personal moderno y responsivo construido con tecnologías web actu
 
 ```
 portfolio-AndresVento-2026/
-├── public/                 # Archivos HTML de producción
-│   └── index.html
+|                 
+│   
 ├── src/                    # Código fuente
 │   ├── css/
 │   │   ├── input.css       # Entrada Tailwind
@@ -43,15 +43,12 @@ portfolio-AndresVento-2026/
 │   │   └── output.css      # CSS compilado (desarrollo)
 │   └── js/
 │       ├── main.js         # JavaScript principal
-│       └── particles.min.js
-├── dist/                   # Archivos compilados para producción
-│   ├── css/
-│   ├── js/
-│   ├── assets/
-│   └── index.html
+│       └── particles.js    # Libreria para las particulas  
+|
 ├── assets/                 # Recursos multimedia
 │   ├── img/                # Imágenes y favicons
 │   └── doc/                # Documentación adicional
+├── index.html              # Archivos HTML de producción
 ├── package.json            # Configuración del proyecto
 ├── tailwind.config.js      # Configuración Tailwind
 ├── particlesjs-config.json # Configuración Particles.js
