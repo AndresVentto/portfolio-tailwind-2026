@@ -1,49 +1,39 @@
 /*~~~~~~~~~~~~~~~ CAMBIAR FONDO DEL ENCABEZADO (Header) ~~~~~~~~~~~~~~~*/ 
 
 export function scrollHeaderFondo() {
-    // Seleccionamos los elementos UNA SOLA VEZ fuera del evento para mayor rendimiento
     const header = document.getElementById("header");
-    const aTags = document.querySelectorAll("nav ul li a");
+    const logoOscuro = document.getElementById("logo-oscuro");
     const themeBoton = document.getElementById("theme-btn");
     const hamburguesa = document.getElementById("hamburguesa");
-    const logoOscuro = document.getElementById("logo-oscuro");
+    const aTags = document.querySelectorAll("nav ul li a");
 
     const scrollHeader = () => {
-        if (window.scrollY >= 60) {
-            // Añadimos fondo oscuro al header
-            header.classList.add("bg-[hsla(216,100%,5%,0.95)]", "shadow-md");
-
-            // Cambiamos los enlaces a blanco
-            aTags.forEach((link) => link.classList.add("text-white"));
-
-            // Aseguramos que los iconos se vean (blanco)
-            themeBoton.classList.add("text-white");
-            hamburguesa.classList.add("text-white");
-
-            // TRUCO: En lugar de cambiar el src, usamos un filtro para volver el logo negro a blanco
-            // Esto evita que el logo "desaparezca" si la imagen no carga rápido o hay conflicto con dark mode
-            if (logoOscuro) {
-                logoOscuro.style.filter = "brightness(0) invert(1)";
-            }
-
-        } else {
-            // Volvemos al estado original (transparente/claro)
-            header.classList.remove("bg-[hsla(216,100%,5%,0.95)]", "shadow-md");
-
-            aTags.forEach((link) => link.classList.remove("text-white"));
+        // Aumentamos un poco el umbral a 20px para evitar saltos bruscos
+        if (window.scrollY > 20) {
+            header.classList.add("bg-[hsla(216,100%,5%,0.98)]", "shadow-xl", "py-2");
+            header.classList.remove("py-5"); // Hacemos el header un poco más delgado al bajar
             
-            themeBoton.classList.remove("text-white");
-            hamburguesa.classList.remove("text-white");
+            // Forzar color blanco en elementos críticos
+            [themeBoton, hamburguesa, ...aTags].forEach(el => {
+                if(el) el.style.color = "#ffffff";
+            });
 
-            if (logoOscuro) {
-                logoOscuro.style.filter = "none";
-            }
+            if (logoOscuro) logoOscuro.style.filter = "brightness(0) invert(1)";
+        } else {
+            header.classList.remove("bg-[hsla(216,100%,5%,0.98)]", "shadow-xl", "py-2");
+            header.classList.add("py-5");
+            
+            // Volver a colores originales (esto quita el estilo inline)
+            [themeBoton, hamburguesa, ...aTags].forEach(el => {
+                if(el) el.style.color = "";
+            });
+
+            if (logoOscuro) logoOscuro.style.filter = "none";
         }
     };
 
     window.addEventListener("scroll", scrollHeader);
-    // Llamamos una vez al inicio por si la página ya carga con scroll
-    scrollHeader();
+    window.addEventListener("load", scrollHeader); // Ejecutar al cargar la página
 }
 
 /*~~~~~~~~~~~~~~~ MOSTRAR BOTÓN DE DESPLAZAMIENTO HACIA ARRIBA ~~~~~~~~~~~~~~~*/ 
