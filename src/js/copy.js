@@ -1,5 +1,5 @@
 const secretos = {
-    phone: ["+58", "424", "217", "1412"].join(" "),
+    phone: ["+58", "424", "217", "1412"].join(""),
     email: ["andresvento.dev", "gmail.com"].join("@")
 };
 

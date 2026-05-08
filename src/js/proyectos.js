@@ -5,7 +5,7 @@ let indicador = document.querySelector("#indicador");
 
 const todos = document.querySelectorAll(".work_card");
 const frontends = document.querySelectorAll(".frontend");
-const sistemas = document.querySelectorAll(".sistema");
+const backends = document.querySelectorAll(".backend");
 const mobiles = document.querySelectorAll(".mobile");
 
 export function moverIndicador(tab) {
@@ -39,8 +39,8 @@ tabs.forEach((tab) => {
         if(tabval === "frontend") {
             frontends.forEach(item => item.style.display = "block");
 
-        } else if(tabval === "sistema") {
-            sistemas.forEach(item => item.style.display = "block");
+        } else if(tabval === "backend") {
+            backends.forEach(item => item.style.display = "block");
 
         } else if(tabval === "mobile") {
             mobiles.forEach(item => item.style.display = "block");

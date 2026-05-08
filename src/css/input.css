@@ -83,24 +83,25 @@
           @apply relative z-10;
      }
 
-     /* Seccion de Servicios */
-     .servicio__elemento{
-          @apply flex flex-wrap items-center gap-3 px-4 py-8 border-b border-primaryColorLight hover:bg-primaryColorLight cursor-pointer duration-300;
+     /* Sección de Servicios */
+     .servicio__elemento {
+          /* Eliminamos flex-wrap de aquí para que el li solo sea el contenedor de la fila */
+          @apply px-4 py-10 border-b border-primaryColorLight hover:bg-primaryColorLight cursor-pointer duration-300;
      }
 
-     .servicio__elemento div p {
-          @apply duration-300;
+     /* Aplicamos los cambios de color a los textos cuando el LI tiene hover */
+     .servicio__elemento:hover h3, 
+     .servicio__elemento:hover p, 
+     .servicio__elemento:hover span {
+          @apply text-whiteColor duration-300;
      }
 
-     .servicio__elemento:hover div p {
-          @apply text-whiteColor;
+     /* Manejo del icono */
+     .servicio__elemento .icon-container i {
+          @apply duration-300 text-primaryColorLight;
      }
 
-     .servicio__elemento div i {
-          @apply duration-300;
-     }
-
-     .servicio__elemento:hover div i {
+     .servicio__elemento:hover .icon-container i {
           @apply text-whiteColor -rotate-90;
      }
 

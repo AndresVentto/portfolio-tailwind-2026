@@ -6,9 +6,6 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="robots" content="index, follow" />
           <meta name="author" content="Andrés. E. Vento. C" />
-          <meta name="theme-color" content="#1e293b" media="(prefers-color-scheme: light)">
-          <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-
           <meta name="description" content="Soy Técnico Superior Universitario en Informática, Desarrollador Web FullStack, especializado en el área del FrontEnd. Mi enfoque se centra en el diseño responsivo, la optimización del rendimiento y la implementación de interfaces intuitivas." />
           <title>Andrés Vento | Desarrollador FullStack </title>
           <!--===== Meta Open Graph (Facebook, LinkedIn, etc.) =====-->
@@ -31,7 +28,7 @@
           <!--============== Google Fonts ================-->
           <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:opsz,wght@14..32,500&display=swap" rel="stylesheet">
           <!--============== Favicon ================-->
-          <link rel="icon" type="image/png" href="./assets/img/icon.png" />
+          <link rel="icon" type="image/png" href="./assets/img/icon.png">
           <!--============== Font Awesome 7.0.1 ================-->
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
           <!--============== Remix Icon ================-->
@@ -175,11 +172,9 @@
                               </div>
                          </div>
                          <!-- Footer Contenido -->
-                         <!-- grid-cols-1 para que en móvil sea una sola columna, lg:grid-cols-4 para escritorio -->
-                         <div class="inicio__footer text-darkSectionColor dark:text-whiteColor grid grid-cols-1 lg:grid-cols-4 gap-y-15 gap-x-6 py-25 md:py-25 px-4 sm:px-10 md:px-0">
+                         <footer class="inicio__footer text-darkSectionColor dark:text-whiteColor grid grid-cols-1 lg:grid-cols-4 gap-y-15 gap-x-6 py-25 md:py-25 px-4 sm:px-10 md:px-0">
                               
                               <!-- ITEM 1 -->
-                              <!-- flex-col (móvil: vertical) lg:flex-row (escritorio: horizontal) -->
                               <div class="flex flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-start gap-2 md:gap-4 group">
                                    <p class="contador font-audiowide text-5xl lg:text-7xl md:text-6xl font-bold text-primaryColor dark:text-primaryLight">4</p>
                                    <p class="text-base sm:text-lg lg:text-xl leading-tight lg:leading-snug font-medium opacity-90 text-center lg:text-left">
@@ -210,7 +205,7 @@
                                         Profesional y <br class="lg:block"> Comprometido.
                                    </p>
                               </div>
-                         </div>
+                         </footer>
                     </div>
 
                     <div class="absolute left-0 bottom-[-2%] w-80 h-80 rounded-full blur-[150px] opacity-50 bg-blue-400 dark:bg-primaryColorLight mix-blend-normal dark:mix-blend-screen"></div>
@@ -219,13 +214,13 @@
                <!--============== PROYECTOS ==============-->
                <section id="proyectos" class="container overflow-x-clip px-5" >
 
-                    <div class="proyectos__top flex flex-col items-center gap-16 text-center md:text-center">
-                         <h2 class="subtitle mb-5">Proyectos Destacados</h2>
+                    <header class="proyectos__top flex flex-col items-center gap-16 text-center md:text-center">
+                         <h2 class="subtitle mb-5 md:mb-10">Proyectos Destacados</h2>
 
-                         <p class="max-w-5xl text-base sm:text-lg md:text-xl leading-relaxed pb-8 text-darkBodyColor dark:text-whiteColor">
+                         <p class="max-w-5xl text-base sm:text-lg md:text-xl leading-relaxed pb-5 text-darkBodyColor dark:text-whiteColor">
                               A continuación presento una selección de proyectos donde pongo en práctica diferentes áreas de la informática, incluyendo desarrollo web, lógica de programación, gestión de bases de datos y diseño y desarrollo de sistemas informáticos. En cada uno he enfocado mis esfuerzos en crear soluciones eficientes, mantenibles y orientadas a resolver problemas reales.
                          </p>
-                    </div>
+                    </header>
                     
                     <!-- Filtro PRO -->
                     <div class="proyectos__taps relative w-full max-w-md mx-auto my-10 p-1 rounded-full border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b bg-ligthBodyColor dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)]">
@@ -235,19 +230,19 @@
 
                          <!-- Tabs -->
                          <div class="flex relative z-10">
-                              <button class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium text-whiteColor cursor-pointer" data-tabs="todos">
+                              <button type="button" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium text-whiteColor cursor-pointer" data-tabs="todos">
                                    Todos
                               </button>
 
-                              <button class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="frontend">
-                                   Webs
+                              <button type="button" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="frontend">
+                                   Frontend
                               </button>
 
-                              <button class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="sistema">
-                                   Sistemas
+                              <button type="button" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="backend">
+                                   Backend
                               </button>
 
-                              <button class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="mobile">
+                              <button type="button" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="mobile">
                                    Mobile
                               </button>
                          </div>
@@ -260,561 +255,577 @@
 
                          <ul class="grid grid-cols-1 gap-15 md:gap-13 md:grid-cols-3">
 
-                              <!-- Frontend -->
-                              <!-- Card-Proyecto-1 -->                              
-                              <div class="work_card frontend group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
+                              <!-- Card-Proyecto-1 -->
+                              <li class="work_card frontend">
+                                   <article class="group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
 
-                                   <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
-                                   
-                                   <div class="relative p-3">
-                                        <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                             <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-                                        </div>
-                                   </div>
-
-                                   <div class="p-6 pt-2 space-y-4 relative z-10">
-                                        <div class="space-y-2">
-                                             <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
-                                                  Proyecto 1
-                                             </h2>
-
-                                             <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
-                                                  Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
-                                             </p>
+                                        <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
+                                        
+                                        <div class="relative p-3">
+                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                             </div>
                                         </div>
 
-                                        <div class="flex flex-wrap gap-2">
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
-                                                  HTML
-                                             </span>
+                                        <div class="p-6 pt-2 space-y-4 relative z-10">
+                                             <div class="space-y-2">
+                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                                       Proyecto 1
+                                                  </h2>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
-                                                  Sass
-                                             </span>
+                                                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
+                                                       Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
+                                                  </p>
+                                             </div>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
-                                                  JavaScript
-                                             </span>
+                                             <div class="flex flex-wrap gap-2">
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                                       HTML
+                                                  </span>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
-                                                  PHP
-                                             </span>
-                                             
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                                  MySQL
-                                             </span>
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                       Sass
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                       JavaScript
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                       PHP
+                                                  </span>
+                                                  
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                       MySQL
+                                                  </span>
+                                             </div>
+
+                                             <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+
+                                             <div class="flex items-center justify-between">
+                                                  <button onclick="event.preventDefault(); openModal('modal-project-1')" type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link ">
+                                                       Ver más detalles
+                                                       <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                                                  </button>
+                                                  
+                                                  <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
+                                                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                       Live
+                                                  </span>
+                                             </div>
                                         </div>
-
-                                        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
-
-                                        <div class="flex items-center justify-between">
-                                             <a href="#" onclick="event.preventDefault(); openModal('modal-project-1')" class="flex items-center gap-2 text-md font-bold text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
-                                                  Ver más detalles
-                                                  <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
-                                             </a>
-                                             
-                                             <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
-                                                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                                  Live
-                                             </span>
-                                        </div>
-                                   </div>
-                              </div>
+                                   </article>
+                              </li>                         
 
                               <!-- Card-Proyecto-2 -->
-                              <div class="work_card frontend group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
+                              <li class="work_card frontend"> 
+                                   <article class="group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
 
-                                   <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
+                                        <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
-                                   <div class="relative p-3">
-                                        <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                             <img src="./assets/img/project-2.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                        <div class="relative p-3">
+                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-2.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
 
-                                        </div>
-                                   </div>
-
-                                   <div class="p-6 pt-2 space-y-4 relative z-10">
-                                        <div class="space-y-2">
-                                             <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
-                                                  Proyecto 2
-                                             </h2>
-
-                                             <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
-                                                  Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
-                                             </p>
+                                             </div>
                                         </div>
 
-                                        <div class="flex flex-wrap gap-2">
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
-                                                  HTML
-                                             </span>
+                                        <div class="p-6 pt-2 space-y-4 relative z-10">
+                                             <div class="space-y-2">
+                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                                       Proyecto 2
+                                                  </h2>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
-                                                  Sass
-                                             </span>
+                                                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
+                                                       Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
+                                                  </p>
+                                             </div>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
-                                                  JavaScript
-                                             </span>
+                                             <div class="flex flex-wrap gap-2">
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                                       HTML
+                                                  </span>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
-                                                  PHP
-                                             </span>
-                                             
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                                  MySQL
-                                             </span>
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                       Sass
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                       JavaScript
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                       PHP
+                                                  </span>
+                                                  
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                       MySQL
+                                                  </span>
+                                             </div>
+
+                                             <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+
+                                             <div class="flex items-center justify-between">
+                                                  <button type="button" class="flex items-center gap-1 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
+                                                       Ver más detalles
+                                                       <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                                                  </button>
+                                                  
+                                                  <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
+                                                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                       Live
+                                                  </span>
+                                             </div>
                                         </div>
-
-                                        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
-
-                                        <div class="flex items-center justify-between">
-                                             <a href="#" class="flex items-center gap-1 text-md font-bold text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
-                                                  Ver más detalles
-                                                  <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
-                                             </a>
-                                             
-                                             <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
-                                                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                                  Live
-                                             </span>
-                                        </div>
-                                   </div>
-                              </div>
+                                   </article>
+                              </li>     
 
                               <!-- Card-Proyecto-3 -->
-                              <div class="work_card frontend group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
+                              <li class="work_card frontend">
+                                   <article class="group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
 
-                                   <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]">
-                                   </div>
-
-                                   <div class="relative p-3">
-                                        <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                             <img src="./assets/img/project-3.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-
-                                             
-                                        </div>
-                                   </div>
-
-                                   <div class="p-6 pt-2 space-y-4 relative z-10">
-                                        <div class="space-y-2">
-                                             <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
-                                                  Proyecto 3
-                                             </h2>
-
-                                             <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
-                                                  Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
-                                             </p>
+                                        <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]">
                                         </div>
 
-                                        <div class="flex flex-wrap gap-2">
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
-                                                  HTML
-                                             </span>
+                                        <div class="relative p-3">
+                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-3.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
-                                                  Sass
-                                             </span>
-
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
-                                                  JavaScript
-                                             </span>
-
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
-                                                  PHP
-                                             </span>
-                                             
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                                  MySQL
-                                             </span>
+                                                  
+                                             </div>
                                         </div>
 
-                                        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+                                        <div class="p-6 pt-2 space-y-4 relative z-10">
+                                             <div class="space-y-2">
+                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                                       Proyecto 3
+                                                  </h2>
 
-                                        <div class="flex items-center justify-between">
-                                             <a href="#" class="flex items-center gap-2 text-md font-bold text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
-                                                  Ver más detalles
-                                                  <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
-                                             </a>
-                                             
-                                             <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
-                                                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                                  Live
-                                             </span>
+                                                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
+                                                       Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
+                                                  </p>
+                                             </div>
+
+                                             <div class="flex flex-wrap gap-2">
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                                       HTML
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                       Sass
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                       JavaScript
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                       PHP
+                                                  </span>
+                                                  
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                       MySQL
+                                                  </span>
+                                             </div>
+
+                                             <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+
+                                             <div class="flex items-center justify-between">
+                                                  <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
+                                                       Ver más detalles
+                                                       <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                                                  </button>
+                                                  
+                                                  <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
+                                                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                       Live
+                                                  </span>
+                                             </div>
                                         </div>
-                                   </div>
-                              </div>
+                                   </article>
+                              </li>
 
                               <!-- Card 4 work_card -->
-                              <div class="work_card sistema group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
+                              <li class="work_card backend">
+                                   <article class="group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
 
-                                   <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]">
-                                   </div>
-
-                                   <div class="relative p-3">
-                                        <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                             <img src="./assets/img/project-4.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-
-                                             
-                                        </div>
-                                   </div>
-
-                                   <div class="p-6 pt-2 space-y-4 relative z-10">
-                                        <div class="space-y-2">
-                                             <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
-                                                  Proyecto 4
-                                             </h2>
-
-                                             <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
-                                                  Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
-                                             </p>
+                                        <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]">
                                         </div>
 
-                                        <div class="flex flex-wrap gap-2">
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
-                                                  HTML
-                                             </span>
-
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
-                                                  Sass
-                                             </span>
-
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
-                                                  JavaScript
-                                             </span>
-
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
-                                                  PHP
-                                             </span>
-                                             
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                                  MySQL
-                                             </span>
+                                        <div class="relative p-3">
+                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-4.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                                  
+                                             </div>
                                         </div>
 
-                                        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+                                        <div class="p-6 pt-2 space-y-4 relative z-10">
+                                             <div class="space-y-2">
+                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                                       Proyecto 4
+                                                  </h2>
 
-                                        <div class="flex items-center justify-between">
-                                             <a href="#" class="flex items-center gap-2 text-md font-bold text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
-                                                  Ver más detalles
-                                                  <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
-                                             </a>
-                                             
-                                             <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
-                                                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                                  Live
-                                             </span>
+                                                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
+                                                       Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
+                                                  </p>
+                                             </div>
+
+                                             <div class="flex flex-wrap gap-2">
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                                       HTML
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                       Sass
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                       JavaScript
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                       PHP
+                                                  </span>
+                                                  
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                       MySQL
+                                                  </span>
+                                             </div>
+
+                                             <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+
+                                             <div class="flex items-center justify-between">
+                                                  <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
+                                                       Ver más detalles
+                                                       <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                                                  </button>
+                                                  
+                                                  <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
+                                                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                       Live
+                                                  </span>
+                                             </div>
                                         </div>
-                                   </div>
-                              </div>
+                                   </article>
+                              </li>
 
                               <!-- Card 5 work_card -->
-                              <div class="work_card sistema group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
+                              <li class="work_card backend">
+                                   <article class="group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
 
-                                   <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
+                                        <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
-                                   <div class="relative p-3">
-                                        <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                             <img src="./assets/img/project-5.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                        <div class="relative p-3">
+                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-5.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
 
-                                             
-                                        </div>
-                                   </div>
-
-                                   <div class="p-6 pt-2 space-y-4 relative z-10">
-                                        <div class="space-y-2">
-                                             <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
-                                                  Proyecto 5
-                                             </h2>
-
-                                             <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
-                                                  Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
-                                             </p>
+                                                  
+                                             </div>
                                         </div>
 
-                                        <div class="flex flex-wrap gap-2">
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
-                                                  HTML
-                                             </span>
+                                        <div class="p-6 pt-2 space-y-4 relative z-10">
+                                             <div class="space-y-2">
+                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                                       Proyecto 5
+                                                  </h2>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
-                                                  Sass
-                                             </span>
+                                                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
+                                                       Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
+                                                  </p>
+                                             </div>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
-                                                  JavaScript
-                                             </span>
+                                             <div class="flex flex-wrap gap-2">
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                                       HTML
+                                                  </span>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
-                                                  PHP
-                                             </span>
-                                             
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                                  MySQL
-                                             </span>
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                       Sass
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                       JavaScript
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                       PHP
+                                                  </span>
+                                                  
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                       MySQL
+                                                  </span>
+                                             </div>
+
+                                             <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+
+                                             <div class="flex items-center justify-between">
+                                                  <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
+                                                       Ver más detalles
+                                                       <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                                                  </button>
+                                                  
+                                                  <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
+                                                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                       Live
+                                                  </span>
+                                             </div>
                                         </div>
+                                   </article> 
+                              </li>
 
-                                        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
-
-                                        <div class="flex items-center justify-between">
-                                             <a href="#" class="flex items-center gap-2 text-md font-bold text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
-                                                  Ver más detalles
-                                                  <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
-                                             </a>
-                                             
-                                             <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
-                                                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                                  Live
-                                             </span>
-                                        </div>
-                                   </div>
-                              </div> 
- 
                               <!-- Card 6 work_card -->
-                              <div class="work_card sistema group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
+                              <li class="work_card backend">
+                                   <article class="group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
 
-                                   <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
+                                        <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
-                                   <div class="relative p-3">
-                                        <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                             <img src="./assets/img/project-2.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                        <div class="relative p-3">
+                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-2.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
 
-                                             
-                                        </div>
-                                   </div>
-
-                                   <div class="p-6 pt-2 space-y-4 relative z-10">
-                                        <div class="space-y-2">
-                                             <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
-                                                  Proyecto 6
-                                             </h2>
-
-                                             <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
-                                                  Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
-                                             </p>
+                                                  
+                                             </div>
                                         </div>
 
-                                        <div class="flex flex-wrap gap-2">
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
-                                                  HTML
-                                             </span>
+                                        <div class="p-6 pt-2 space-y-4 relative z-10">
+                                             <div class="space-y-2">
+                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                                       Proyecto 6
+                                                  </h2>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
-                                                  Sass
-                                             </span>
+                                                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
+                                                       Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
+                                                  </p>
+                                             </div>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
-                                                  JavaScript
-                                             </span>
+                                             <div class="flex flex-wrap gap-2">
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                                       HTML
+                                                  </span>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
-                                                  PHP
-                                             </span>
-                                             
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                                  MySQL
-                                             </span>
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                       Sass
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                       JavaScript
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                       PHP
+                                                  </span>
+                                                  
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                       MySQL
+                                                  </span>
+                                             </div>
+
+                                             <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+
+                                             <div class="flex items-center justify-between">
+                                                  <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
+                                                       Ver más detalles
+                                                       <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                                                  </button>
+                                                  
+                                                  <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
+                                                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                       Live
+                                                  </span>
+                                             </div>
                                         </div>
+                                   </article> 
+                              </li>
 
-                                        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
-
-                                        <div class="flex items-center justify-between">
-                                             <a href="#" class="flex items-center gap-2 text-md font-bold text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
-                                                  Ver más detalles
-                                                  <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
-                                             </a>
-                                             
-                                             <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
-                                                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                                  Live
-                                             </span>
-                                        </div>
-                                   </div>
-                              </div> 
- 
                               <!-- Card 7 work_card -->
-                              <div class="work_card  mobile group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
+                              <li class="work_card mobile">
+                                   <article class="group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
 
-                                   <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
+                                        <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
-                                   <div class="relative p-3">
-                                        <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                             <img src="./assets/img/project-3.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                        <div class="relative p-3">
+                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-3.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
 
-                                             
-                                        </div>
-                                   </div>
-
-                                   <div class="p-6 pt-2 space-y-4 relative z-10">
-                                        <div class="space-y-2">
-                                             <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
-                                                  Proyecto 7
-                                             </h2>
-
-                                             <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
-                                                  Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
-                                             </p>
+                                                  
+                                             </div>
                                         </div>
 
-                                        <div class="flex flex-wrap gap-2">
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
-                                                  HTML
-                                             </span>
+                                        <div class="p-6 pt-2 space-y-4 relative z-10">
+                                             <div class="space-y-2">
+                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                                       Proyecto 7
+                                                  </h2>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
-                                                  Sass
-                                             </span>
+                                                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
+                                                       Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
+                                                  </p>
+                                             </div>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
-                                                  JavaScript
-                                             </span>
+                                             <div class="flex flex-wrap gap-2">
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                                       HTML
+                                                  </span>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
-                                                  PHP
-                                             </span>
-                                             
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                                  MySQL
-                                             </span>
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                       Sass
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                       JavaScript
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                       PHP
+                                                  </span>
+                                                  
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                       MySQL
+                                                  </span>
+                                             </div>
+
+                                             <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+
+                                             <div class="flex items-center justify-between">
+                                                  <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
+                                                       Ver más detalles
+                                                       <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                                                  </button>
+                                                  
+                                                  <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
+                                                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                       Live
+                                                  </span>
+                                             </div>
                                         </div>
-
-                                        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
-
-                                        <div class="flex items-center justify-between">
-                                             <a href="#" class="flex items-center gap-2 text-md font-bold text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
-                                                  Ver más detalles
-                                                  <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
-                                             </a>
-                                             
-                                             <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
-                                                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                                  Live
-                                             </span>
-                                        </div>
-                                   </div>
-                              </div> 
+                                   </article> 
+                              </li>
 
                               <!-- Card 8 work_card -->
-                              <div class="work_card  mobile group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
+                              <li class="work_card mobile">
+                                   <article class="group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
 
-                                   <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
+                                        <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
-                                   <div class="relative p-3">
-                                        <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                             <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                        <div class="relative p-3">
+                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
 
-                                             
-                                        </div>
-                                   </div>
-
-                                   <div class="p-6 pt-2 space-y-4 relative z-10">
-                                        <div class="space-y-2">
-                                             <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
-                                                  Proyecto 8
-                                             </h2>
-
-                                             <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
-                                                  Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
-                                             </p>
+                                                  
+                                             </div>
                                         </div>
 
-                                        <div class="flex flex-wrap gap-2">
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
-                                                  HTML
-                                             </span>
+                                        <div class="p-6 pt-2 space-y-4 relative z-10">
+                                             <div class="space-y-2">
+                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                                       Proyecto 8
+                                                  </h2>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
-                                                  Sass
-                                             </span>
+                                                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
+                                                       Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
+                                                  </p>
+                                             </div>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
-                                                  JavaScript
-                                             </span>
+                                             <div class="flex flex-wrap gap-2">
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                                       HTML
+                                                  </span>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
-                                                  PHP
-                                             </span>
-                                             
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                                  MySQL
-                                             </span>
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                       Sass
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                       JavaScript
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                       PHP
+                                                  </span>
+                                                  
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                       MySQL
+                                                  </span>
+                                             </div>
+
+                                             <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+
+                                             <div class="flex items-center justify-between">
+                                                  <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
+                                                       Ver más detalles
+                                                       <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                                                  </button>
+                                                  
+                                                  <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
+                                                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                       Live
+                                                  </span>
+                                             </div>
                                         </div>
-
-                                        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
-
-                                        <div class="flex items-center justify-between">
-                                             <a href="#" class="flex items-center gap-2 text-md font-bold text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
-                                                  Ver más detalles
-                                                  <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
-                                             </a>
-                                             
-                                             <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
-                                                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                                  Live
-                                             </span>
-                                        </div>
-                                   </div>
-                              </div>
+                                   </article>
+                              </li>
  
                               <!-- Card 9 work_card -->
-                              <div class="work_card mobile group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
+                              <li class="work_card mobile">
+                                   <article class="group relative max-w-xl overflow-hidden rounded-3xl border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b from-sectionColor to-white dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
 
-                                   <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
+                                        <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
-                                   <div class="relative p-3">
-                                        <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                             <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-                                        </div>
-                                   </div>
-
-                                   <div class="p-6 pt-2 space-y-4 relative z-10">
-                                        <div class="space-y-2">
-                                             <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
-                                                  Proyecto 9
-                                             </h2>
-
-                                             <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
-                                                  Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
-                                             </p>
+                                        <div class="relative p-3">
+                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                             </div>
                                         </div>
 
-                                        <div class="flex flex-wrap gap-2">
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
-                                                  HTML
-                                             </span>
+                                        <div class="p-6 pt-2 space-y-4 relative z-10">
+                                             <div class="space-y-2">
+                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                                       Proyecto 9
+                                                  </h2>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
-                                                  Sass
-                                             </span>
+                                                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
+                                                       Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
+                                                  </p>
+                                             </div>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
-                                                  JavaScript
-                                             </span>
+                                             <div class="flex flex-wrap gap-2">
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                                       HTML
+                                                  </span>
 
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
-                                                  PHP
-                                             </span>
-                                             
-                                             <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                                  MySQL
-                                             </span>
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                       Sass
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                       JavaScript
+                                                  </span>
+
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                       PHP
+                                                  </span>
+                                                  
+                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                       MySQL
+                                                  </span>
+                                             </div>
+
+                                             <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
+
+                                             <div class="flex items-center justify-between">
+                                                  <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
+                                                       Ver más detalles
+                                                       <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                                                  </button>
+                                                  
+                                                  <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
+                                                       <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                       Live
+                                                  </span>
+                                             </div>
                                         </div>
-
-                                        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
-
-                                        <div class="flex items-center justify-between">
-                                             <a href="#" class="flex items-center gap-2 text-md font-bold text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
-                                                  Ver más detalles
-                                                  <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
-                                             </a>
-                                             
-                                             <span class="flex items-center gap-1 text-[10px] uppercase tracking-widest text-zinc-400">
-                                                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                                  Live
-                                             </span>
-                                        </div>
-                                   </div>
-                              </div>
+                                   </article>
+                              </li>
                          </ul>
                     </div>
                </section>
@@ -822,11 +833,10 @@
                <!--============== SOBRE MÍ ==============-->
                <section id="sobre_mi" class="relative overflow-x-clip  px-5">
 
-                    <!-- Fondo estilo INICIO -->
+                    <!-- Fondo estilo -->
                     <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(#475569 1px, transparent 1px); background-size: 24px 24px;">
                     </div>
 
-                    <!-- Adornos tipo inicio -->
                     <div class="absolute right-0 top-[-20%] w-80 h-80 rounded-full blur-[150px] opacity-50 bg-blue-400 dark:bg-primaryColorLight mix-blend-normal dark:mix-blend-screen"></div>
 
                     <div class="absolute left-0 bottom-[-10%] w-80 h-80 rounded-full blur-[150px] opacity-40 bg-blue-400 dark:bg-primaryColorLight mix-blend-normal dark:mix-blend-screen"></div>
@@ -852,7 +862,7 @@
                               </div>
 
                               <!-- Texto -->
-                              <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                              <article class="md:w-1/2 space-y-6 text-center md:text-left">
 
                                    <h2 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white">
                                         <span class="subtitle leading-relaxed md:text-3xl">
@@ -883,7 +893,7 @@
                                              ¡Contáctame! <i class="fa-solid fa-phone"></i>
                                         </a>
                                    </div>
-                              </div>
+                              </article>
                          </div>
                     </div>
                </section>
@@ -891,12 +901,12 @@
                <!--============== MYS SKILLS ==============--> 
                <section id="skills" class="container px-5"> 
                     
-                    <div class="skills__top flex flex-col items-center gap-5 text-center"> 
+                    <header class="skills__top flex flex-col items-center gap-5 text-center"> 
                          <h2 class="subtitle mb-5">My Skills</h2> 
                          <p class="max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl pb-10 text-center">
                               Estas son las tecnologías con las que tengo mayor experiencia; sin embargo, me adapto fácilmente a nuevas herramientas y entornos. 
                          </p> 
-                    </div> 
+                    </header> 
 
                     <!-- ===== SLIDER STACKS ===== -->
                     <div class="skills_slider overflow-hidden">
@@ -1220,223 +1230,156 @@
                </section>
 
                <!--============== CURRÍCULUM ==============-->
-               <section id="curriculum" class="container py-16 px-5">
+               <!--============== SECCIÓN: CURRÍCULUM / TRAYECTORIA ==============-->
+               <section id="curriculum" class="container py-16 px-5" aria-labelledby="curriculum-title">
 
-                    <!-- Título -->
-                    <div class="text-center mb-16">
-                         <h2 class="subtitle">Mi Currículum</h2>
-                    </div>
+                    <header class="text-center mb-16">
+                         <h2 id="curriculum-title" class="subtitle">Formación Profesional</h2>
+                         <p class="max-w-2xl mx-auto opacity-70 mt-4">
+                              Especializado en el desarrollo de soluciones tecnológicas, desde la arquitectura de sistemas hasta la implementación de inteligencia artificial.
+                         </p>
+                    </header>
 
                     <div class="relative max-w-sm md:max-w-5xl mx-auto">
 
-                         <!-- Línea vertical (SIEMPRE visible) -->
-                         <div class="absolute left-4 md:left-5 top-0 h-full w-[2px] bg-primaryColorLight -translate-x-6 md:-translate-x-6 lg:-translate-x-10"></div>
+                         <!-- Línea vertical decorativa -->
+                         <div class="absolute left-4 md:left-5 top-0 h-full w-[2px] bg-primaryColorLight -translate-x-6 md:-translate-x-6 lg:-translate-x-10" aria-hidden="true"></div>
 
-                         <!-- ================= EXPERIENCIA ================= -->
+                         <!-- ================= EXPERIENCIA PROFESIONAL ================= -->
                          <div class="mb-16">
-
-                              <!-- Título -->
-                              <h3 class="flex items-center gap-3 text-3xl md:text-4xl mb-10 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-800 dark:from-blue-300 dark:via-cyan-500 dark:to-blue-600 text-transparent bg-clip-text">
-                                   <i class="fa-solid fa-briefcase"></i> Experiencia
+                              <h3 class="flex items-center gap-3 text-3xl md:text-4xl mb-10 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-800 dark:from-blue-300 dark:via-cyan-500 dark:to-blue-600 text-transparent bg-clip-text font-bold">
+                                   <i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experiencia Relevante
                               </h3>
 
-                              <div class="space-y-10">
-
-                                   <!-- Item -->
-                                   <div class="relative pl-12">
-
-                                        <!-- Punto -->
-                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor"></span>
-
-                                        <!-- Card -->
-                                        <div class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
+                              <ul class="space-y-10 list-none">
+                                   <li class="relative pl-12">
+                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
                                         
-                                             <p class="text-primaryColorLight text-sm font-semibold mb-2">
-                                                  Sep - Dic 2025
-                                             </p>
+                                        <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
+                                             <time datetime="2025-09" class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">
+                                                  Sep 2025 - Dic 2025
+                                             </time>
 
-                                             <h4 class="text-lg md:text-xl font-bold uppercase mb-2">
-                                                  💼 Pasantías Profesionales
+                                             <h4 class="text-lg md:text-xl font-bold uppercase mb-1">
+                                                  💼 Pasantías Profesionales 
                                              </h4>
 
-                                             <p class="text-sm md:text-base opacity-80">
-                                                  Agencia Bolivariana para Actividades Espaciales (ABAE), Miranda
+                                             <p class="text-sm md:text-base font-medium opacity-90 mb-2">
+                                                  Agencia Bolivariana para Actividades Espaciales (ABAE)
                                              </p>
-                                        </div>
-                                   </div>
-
-                                   <!-- Card oculta -->
-                                   <div class="relative pl-12 hidden">
-
-                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor"></span>
-
-                                        <div class="cv_card p-5 md:p-6 rounded-2xl bg-white/5 dark:bg-darkSectionColor/60 backdrop-blur-md border border-white/10 transition duration-300">
-                                        
-                                             <p class="text-primaryColorLight text-sm font-semibold mb-2">
-                                                  Próximamente
-                                             </p>
-
-                                             <h4 class="text-lg md:text-xl font-bold uppercase mb-2">
-                                                  Futuro Trabajo
-                                             </h4>
-
-                                             <p class="text-sm md:text-base opacity-80">
-                                                  En proceso...
-                                             </p>
-                                        </div>
-                                   </div>
-                              </div>
+                                        </article>
+                                   </li>
+                              </ul>
                          </div>
 
-                         <!-- ================= EDUCACIÓN ================= -->
-                         <div>
-                              <!-- Título -->
-                              <h3 class="flex items-center gap-3 text-3xl md:text-4xl mb-10 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-800 dark:from-blue-300 dark:via-cyan-500 dark:to-blue-600 text-transparent bg-clip-text">
-                                   <i class="fa-solid fa-graduation-cap"></i> Estudios
+                         <!-- ================= EDUCACIÓN Y CERTIFICACIONES ================= -->
+                         <div class="mb-16">
+                              <h3 class="flex items-center gap-3 text-3xl md:text-4xl mb-10 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-800 dark:from-blue-300 dark:via-cyan-500 dark:to-blue-600 text-transparent bg-clip-text font-bold">
+                                   <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Formación y Certificaciones
                               </h3>
 
-                              <div class="space-y-10">
+                              <ul class="space-y-10 list-none">
 
-                                   <!-- Card -->
-                                   <div class="relative pl-12">
+                                   <!-- Título Universitario -->
+                                   <li class="relative pl-12">
+                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
+                                        <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg transition duration-300">
+                                             <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">Mar 2022 — May 2026</time>
+                                             <h4 class="text-lg md:text-xl font-bold uppercase mb-1">🎓 Técnico Superior Universitario en Informática</h4>
+                                             <p class="text-sm md:text-base opacity-80 italic">Instituto Universitario "Jesús Obrero" (IUJO), Caracas.</p>
+                                        </article>
+                                   </li>
 
-                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor"></span>
-
-                                        <div class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
-
-                                             <p class="text-primaryColorLight text-sm font-semibold mb-2">
-                                                  Mar 2022 - May 2026
-                                             </p>
-
-                                             <h4 class="text-lg md:text-xl font-bold uppercase mb-2">
-                                                  🎓 Técnico Superior Universitario en Informática
-                                             </h4>
-
-                                             <p class="text-sm md:text-base opacity-80">
-                                                  IUJO Caracas - Instituto Universitario "Jesús Obrero"
-                                             </p>
-                                        </div>
-                                   </div>
-
-                                   <!-- Card -->
-                                   <div class="relative pl-12">
-
-                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor"></span>
-
-                                        <a href="./assets/doc/Samsung_Inovation_Campus_2024.pdf" target="_blank">
-                                             <div class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
-
-                                                  <p class="text-primaryColorLight text-sm font-semibold mb-2">
-                                                       Oct 2024 - Mar 2025
-                                                  </p>
-
-                                                  <h4 class="text-lg md:text-xl font-bold uppercase mb-2">
-                                                       🐍 Python e Inteligencia Artificial 🤖
-                                                  </h4>
-
-                                                  <p class="text-sm md:text-base opacity-80">
-                                                       Samsung Innovation Campus
-                                                  </p>
-                                             </div>
+                                   <!-- Samsung Innovation -->
+                                   <li class="relative pl-12">
+                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
+                                        <a href="./assets/doc/Samsung_Inovation_Campus_2024.pdf" target="_blank" rel="noopener noreferrer" title="Certificado Python e IA" class="block">
+                                             <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
+                                                  <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">Oct 2024 — Mar 2025</time>
+                                                  <h4 class="text-lg md:text-xl font-bold uppercase mb-1">🐍 Python e Inteligencia Artificial 🤖</h4>
+                                                  <p class="text-sm md:text-base opacity-80 font-medium">Samsung Innovation Campus</p>
+                                             </article>
                                         </a>
-                                   </div>
+                                   </li>
 
-                                   <!-- Card -->
-                                   <div class="relative pl-12">
-
-                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor"></span>
-
-                                        <a href="./assets/doc/Certificado-Ciberseguridad-Hacking.pdf" target="_blank">
-                                             <div class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
-
-                                                  <p class="text-primaryColorLight text-sm font-semibold mb-2">
-                                                       Abr 2026
-                                                  </p>
-
-                                                  <h4 class="text-lg md:text-xl font-bold uppercase mb-2">
-                                                       🔐 Hacking Ético y Ciberseguridad 🛡️
-                                                  </h4>
-
-                                                  <p class="text-sm md:text-base opacity-80">
-                                                       Online - BIG School
-                                                  </p>
-                                             </div>
+                                   <!-- Ciberseguridad -->
+                                   <li class="relative pl-12">
+                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
+                                        <a href="./assets/doc/Certificado-Ciberseguridad-Hacking.pdf" target="_blank" rel="noopener noreferrer" title="Certificado Hacking Ético" class="block">
+                                             <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
+                                                  <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">Abril 2026</time>
+                                                  <h4 class="text-lg md:text-xl font-bold uppercase mb-1">🔐 Hacking Ético y Ciberseguridad 🛡️</h4>
+                                                  <p class="text-sm md:text-base opacity-80 font-medium">BIG School - Formación Profesional</p>
+                                             </article>
                                         </a>
-                                   </div>
+                                   </li>
 
-                                   <!-- Card -->
-                                   <div class="relative pl-12">
+                                   <!-- Desarrollo con IA -->
+                                   <li class="relative pl-12">
 
-                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor"></span>
-
-                                        <a href="./assets/doc/Certificado-Desarrollo-Con-IA.pdf" target="_blank">
-                                             <div class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
-
-                                                  <p class="text-primaryColorLight text-sm font-semibold mb-2">
-                                                       Abr 2026
-                                                  </p>
-
-                                                  <h4 class="text-lg md:text-xl font-bold uppercase mb-2">
+                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
+                                        
+                                        <a href="./assets/doc/Certificado-Desarrollo-Con-IA.pdf" target="_blank" rel="noopener noreferrer" title="Certificado Desarrollo con IA" class="block">
+                                             <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg transition duration-300 hover:scale-[1.01]">
+                                                  <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">
+                                                       Abril 2026
+                                                  </time>
+                                                  <h4 class="text-lg md:text-xl font-bold uppercase mb-1">
                                                        🧠 Desarrollo con Inteligencia Artificial
                                                   </h4>
-
-                                                  <p class="text-sm md:text-base opacity-80">
-                                                       Online - BIG School
+                                                  <p class="text-sm md:text-base opacity-80 font-medium">
+                                                       BIG School
                                                   </p>
-                                             </div>
+                                             </article>
                                         </a>
-                                   </div>
+                                   </li>
 
-                                   <div class="absolute left-0 bottom-20 w-80 h-80 bg-primaryColorLight mix-blend-screen rounded-full blur-[150px] opacity-50"></div>
+                                   <!-- Python -->
+                                   <li class="relative pl-12">
 
-                                   <!-- Card -->
-                                   <div class="relative pl-12">
-
-                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor"></span>
-
-                                        <a href="./assets/doc/IUJO-CEP PYTHON.pdf" target="_blank">
-                                             <div class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
-
-                                                  <p class="text-primaryColorLight text-sm font-semibold mb-2">
+                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
+                                        
+                                        <a href="./assets/doc/IUJO-CEP PYTHON.pdf" target="_blank" rel="noopener noreferrer" title="Certificado Desarrollo con IA" class="block">
+                                             <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg transition duration-300 hover:scale-[1.01]">
+                                                  <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">
                                                        Julio 2024
-                                                  </p>
-
-                                                  <h4 class="text-lg md:text-xl font-bold uppercase mb-2">
-                                                       🐍 Programación Básica con Python 
+                                                  </time>
+                                                  <h4 class="text-lg md:text-xl font-bold uppercase mb-1">
+                                                       🐍 Programación Básica con Python
                                                   </h4>
-
-                                                  <p class="text-sm md:text-base opacity-80">
-                                                       IUJO Caracas - Instituto Universitario "Jesús Obrero"
+                                                  <p class="text-sm md:text-base opacity-80 font-medium">
+                                                       IUJO Caracas
                                                   </p>
-                                             </div>
+                                             </article>
                                         </a>
-                                   </div>
+                                   </li>
 
-                                   <!-- Card -->
-                                   <div class="relative pl-12">
+                                   <!-- JavaScript -->
+                                   <li class="relative pl-12">
 
-                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor"></span>
-
-                                        <a href="./assets/doc/IUJO-CEP JAVASCRIPT.pdf" target="_blank">
-                                             <div class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
-
-                                                  <p class="text-primaryColorLight text-sm font-semibold mb-2">
-                                                       Mar 2023
-                                                  </p>
-
-                                                  <h4 class="text-lg md:text-xl font-bold uppercase mb-2">
-                                                       💻 Desarrollo Web con JavaScript Intermedio 
+                                        <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
+                                        
+                                        <a href="./assets/doc/IUJO-CEP JAVASCRIPT.pdf" target="_blank" rel="noopener noreferrer" title="Certificado JS Intermedio" class="block">
+                                             <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg transition duration-300 hover:scale-[1.01]">
+                                                  <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">
+                                                       Marzo 2023
+                                                  </time>
+                                                  <h4 class="text-lg md:text-xl font-bold uppercase mb-1">
+                                                       🌐 Desarrollo Web con JavaScript 💻 
                                                   </h4>
-
-                                                  <p class="text-sm md:text-base opacity-80">
-                                                       IUJO Caracas - Instituto Universitario "Jesús Obrero"
+                                                  <p class="text-sm md:text-base opacity-80 italic">
+                                                       IUJO Caracas
                                                   </p>
-                                             </div>
+                                             </article>
                                         </a>
-                                   </div>
-                              </div>
+                                   </li>
+                              </ul>
                          </div>
                     </div>
+                    
+                    <!-- Elemento decorativo desenfocado -->
+                    <div class="absolute left-0 bottom-20 w-80 h-80 bg-primaryColorLight mix-blend-screen rounded-full blur-[150px] opacity-20 pointer-events-none" aria-hidden="true"></div>
+
                </section>
 
                <!--============== SERVICIOS ==============-->
@@ -1446,89 +1389,106 @@
                     
                     <div class="container px-5">
 
-                         <div class="servicio__top flex flex-col items-center text-center">
+                         <header class="servicio__top flex flex-col items-center text-center">
                               <h2 class="subtitle font-bold">Mis Servicios</h2>
-                              <p class="max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl pb-10 text-center">
+                              <p class="max-w-2xl text-base sm:text-lg md:text-xl lg:text-2xl pb-10 pt-10 text-center">
                                    Ofrezco soluciones digitales enfocadas en rendimiento, diseño y experiencia de usuario, ayudando a transformar ideas en proyectos reales y funcionales.
                               </p>
-                         </div>
+                         </header>
 
                          <!-- Lista de servicios -->
-                         <div class="my-10">
 
-                              <!-- 1 -->
-                              <div class="servicio__elemento border-t">
-                                   <div class="text-2xl font-bold flex items-center gap-3 md:w-[40%]">
-                                        <p class="text-primaryColorLight">01</p>
-                                        <p class="text-base sm:text-lg md:text-xl">Desarrollo Web</p>
-                                   </div>
+                         <ul class="my-10 list-none">
+                              <!-- Servicio 01: FullStack -->
+                              <li class="servicio__elemento border-t">
+                                   <article class="flex flex-wrap md:flex-nowrap items-center gap-5 w-full">
+                                        <div class="text-2xl font-bold flex items-center gap-5 md:w-[40%]">
+                                             <span class="text-primaryColorLight" aria-hidden="true">01</span>
+                                             <h3 class="text-base sm:text-lg md:text-xl font-bold">Desarrollo Web FullStack</h3>
+                                        </div>
+                                        <div class="ml-auto text-2xl rotate-45 md:order-last icon-container">
+                                             <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
+                                             <p class="text-base sm:text-lg md:text-xl">
+                                                  Desarrollo sitios y aplicaciones web modernas, rápidas y adaptables a cualquier dispositivo, enfocadas en el rendimiento,la funcionalidad, la experiencia de usuario y cuidado del <strong>SEO (Search Engine Optimization)</strong>.
+                                             </p>
+                                        </div>
+                                   </article>
+                              </li>
 
-                                   <div class="ml-auto text-2xl rotate-45 md:order-last">
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                   </div>
+                              <!-- Servicio 02: Base de Datos-->
+                              <li class="servicio__elemento">
+                                   <article class="flex flex-wrap md:flex-nowrap items-center gap-5 w-full">
+                                        <div class="text-2xl font-bold flex items-center gap-5 md:w-[40%]">
+                                             <span class="text-primaryColorLight" aria-hidden="true">02</span>
+                                             <h3 class="text-base sm:text-lg md:text-xl font-bold">Gestión de Bases de Datos</h3>
+                                        </div>
+                                        <div class="ml-auto text-2xl rotate-45 md:order-last icon-container">
+                                             <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
+                                             <p class="text-base sm:text-lg md:text-xl">
+                                                  Diseño de modelos relacionales, optimización de consultas <strong>SQL</strong> complejas y administración de datos que garantizar integridad, escalabilidad y un rendimiento óptimo a sistemas informaticos de manejos de datos.
+                                             </p>
+                                        </div>
+                                   </article>
+                              </li>
 
-                                   <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
-                                        <p class="text-base sm:text-lg md:text-xl">
-                                             Desarrollo sitios y aplicaciones web modernas, rápidas y adaptables a cualquier dispositivo, enfocadas en rendimiento y funcionalidad.
-                                        </p>
-                                   </div>
-                              </div>
+                              <!-- Servicio 03: Sistemas -->
+                              <li class="servicio__elemento">
+                                   <article class="flex flex-wrap md:flex-nowrap items-center gap-5 w-full">
+                                        <div class="text-2xl font-bold flex items-center gap-5 md:w-[40%]">
+                                             <span class="text-primaryColorLight" aria-hidden="true">03</span>
+                                             <h3 class="text-base sm:text-lg md:text-xl font-bold">Arquitectura de Software</h3>
+                                        </div>
+                                        <div class="ml-auto text-2xl rotate-45 md:order-last icon-container">
+                                             <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
+                                             <p class="text-base sm:text-lg md:text-xl">
+                                                  Diseño de estructuras de sistemas escalables y mantenibles, aplicando principios de ingeniería para garantizar código limpio y eficiente con su respectiva documentación técnica.
+                                             </p>
+                                        </div>
+                                   </article>
+                              </li>
 
-                              <!-- 2 -->
-                              <div class="servicio__elemento">
-                                   <div class="text-2xl font-bold flex items-center gap-3 md:w-[40%]">
-                                        <p class="text-primaryColorLight">02</p>
-                                        <p class="text-base sm:text-lg md:text-xl">Diseño Web</p>
-                                   </div>
+                              <!-- Servicio 04: Soporte/Bugs (Mucho más profesional) -->
+                              <li class="servicio__elemento">
+                                   <article class="flex flex-wrap md:flex-nowrap items-center gap-5 w-full">
+                                        <div class="text-2xl font-bold flex items-center gap-5 md:w-[40%]">
+                                             <span class="text-primaryColorLight" aria-hidden="true">04</span>
+                                             <h3 class="text-base sm:text-lg md:text-xl font-bold">Depuración de Software</h3>
+                                        </div>
+                                        <div class="ml-auto text-2xl rotate-45 md:order-last icon-container">
+                                             <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
+                                             <p class="text-base sm:text-lg md:text-xl">
+                                                  Identifico y resuelvo errores críticos, mejoro el código existente y optimizo flujos de trabajo para elevar la calidad del producto.
+                                             </p>
+                                        </div>
+                                   </article>
+                              </li>
 
-                                   <div class="ml-auto text-2xl rotate-45 md:order-last">
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                   </div>
-
-                                   <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
-                                        <p class="text-base sm:text-lg md:text-xl">
-                                             Diseño interfaces atractivas y profesionales, cuidando cada detalle visual para transmitir confianza y claridad.
-                                        </p>
-                                   </div>
-                              </div>
-
-                              <!-- 3 -->
-                              <div class="servicio__elemento">
-                                   <div class="text-2xl font-bold flex items-center gap-3 md:w-[40%]">
-                                        <p class="text-primaryColorLight">03</p>
-                                        <p class="text-base sm:text-lg md:text-xl">Experiencia de Usuario (UI/UX)</p>
-                                   </div>
-
-                                   <div class="ml-auto text-2xl rotate-45 md:order-last">
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                   </div>
-
-                                   <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
-                                        <p class="text-base sm:text-lg md:text-xl">
-                                             Optimizo la interacción del usuario creando interfaces intuitivas, fáciles de usar y centradas en la experiencia.
-                                        </p>
-                                   </div>
-                              </div>
-
-                              <!-- 4 -->
-                              <div class="servicio__elemento">
-                                   <div class="text-2xl font-bold flex items-center gap-3 md:w-[40%]">
-                                        <p class="text-primaryColorLight">04</p>
-                                        <p class="text-base sm:text-lg md:text-xl">Mantenimiento y Optimización</p>
-                                   </div>
-
-                                   <div class="ml-auto text-2xl rotate-45 md:order-last">
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                   </div>
-
-                                   <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
-                                        <p class="text-base sm:text-lg md:text-xl">
-                                             Mejoro el rendimiento, velocidad y seguridad de sitios web existentes, asegurando su correcto funcionamiento a largo plazo.
-                                        </p>
-                                   </div>
-                              </div>
-
-                         </div>
+                              <!-- Servicio 05: Redes/Infraestructura -->
+                              <li class="servicio__elemento">
+                                   <article class="flex flex-wrap md:flex-nowrap items-center gap-5 w-full">
+                                        <div class="text-2xl font-bold flex items-center gap-5 md:w-[40%]">
+                                             <span class="text-primaryColorLight" aria-hidden="true">05</span>
+                                             <h3 class="text-base sm:text-lg md:text-xl font-bold">Infraestructura y Redes</h3>
+                                        </div>
+                                        <div class="ml-auto text-2xl rotate-45 md:order-last icon-container">
+                                             <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        <div class="md:max-w-[330px] lg:max-w-md xl:max-w-lg">
+                                             <p class="text-base sm:text-lg md:text-xl">
+                                                  Gestión de servidores, configuración de redes distribuidas y administración de entornos <strong>Linux</strong> para garantizar estabilidad y seguridad.
+                                             </p>
+                                        </div>
+                                   </article>
+                              </li>
+                         </ul>
                     </div>
                </section>
 
@@ -1601,11 +1561,11 @@
                <!--============== CONTACTO ==============-->
                <section id="contacto" class="container py-1 relative overflow-hidden px-5">
                     
-                    <div class="text-center mb-16">
+                    <header class="text-center mb-16">
                          <h2 class="subtitle font-bold">
                               ¡Contáctame! 
                          </h2>
-                    </div>
+                    </header>
 
                     <div class="absolute right-50 bottom-[30%] w-80 h-80 rounded-full blur-[150px] opacity-50 bg-blue-400 dark:bg-primaryColorLight mix-blend-normal dark:mix-blend-screen"></div>  
 
@@ -1623,7 +1583,7 @@
                                         <i class="fa-solid fa-phone"></i>
                                    </div>
 
-                                   <div class="space-y-1 w-full text-center sm:text-left">
+                                   <article class="space-y-1 w-full text-center sm:text-left">
                                         <p class="text-xs uppercase tracking-wider text-gray-500 dark:text-white/50 font-bold">
                                              Teléfono:
                                         </p>
@@ -1634,17 +1594,23 @@
                                              </a>
                                              
                                              <div class="flex items-center gap-4">
-                                                  <button class="copy-icon flex items-center justify-center gap-2 px-4 py-2 sm:p-2 rounded-xl border border-primaryColorLight dark:border-primaryColorLight/40 bg-primaryColorLight/20 sm:bg-transparent text-primaryColorLight hover:bg-primaryColorLight hover:text-white transition-all duration-100 active:scale-95" data-type="phone" title="Copiar teléfono" data-text="Teléfono">
+
+                                                  <button 
+                                                  class="copy-icon flex items-center justify-center gap-2 px-4 py-2 sm:p-2 rounded-xl border border-primaryColorLight dark:border-primaryColorLight/40 bg-primaryColorLight/20 sm:bg-transparent text-primaryColorLight hover:bg-primaryColorLight hover:text-white transition-all duration-100 active:scale-95" 
+                                                  data-type="phone" 
+                                                  data-text="Teléfono" 
+                                                  title="Copiar Teléfono" 
+                                                  aria-label="Copiar Teléfono">
                                                        <i class="fa-solid fa-copy text-lg"></i>
                                                        <span class="sm:hidden text-sm font-semibold">Copiar</span>
                                                   </button>
 
-                                                  <a id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-3 py-2 rounded-xl bg-[#3b995d] text-white active:scale-95 transition-all shadow-lg shadow-[#25D366]/20" title="Contactar por WhatsApp">
+                                                  <a id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-3 py-2 rounded-xl bg-[#3b995d] text-white active:scale-95 transition-all shadow-lg shadow-[#25D366]/20" title="Contactar por WhatsApp" aria-label="Contactar por WhatsApp">
                                                        <i class="fa-brands fa-whatsapp text-xl"></i>
                                                   </a>
                                              </div>
                                         </div>
-                                   </div>
+                                   </article>
                               </div>
 
                               <!-- CARD CORREO -->
@@ -1654,7 +1620,7 @@
                                         <i class="fa-solid fa-envelope"></i>
                                    </div>
 
-                                   <div class="space-y-1 w-full text-center sm:text-left overflow-hidden">
+                                   <article class="space-y-1 w-full text-center sm:text-left overflow-hidden">
                                         <p class="text-xs uppercase tracking-wider text-gray-500 dark:text-white/50 font-bold">
                                              Correo electrónico:
                                         </p>
@@ -1664,12 +1630,17 @@
                                                   <!-- Se inserta en el JavaScript -->
                                              </span>
                                              
-                                             <button class="copy-icon mt-2 sm:mt-0 flex items-center justify-center gap-2 px-4 py-2 sm:p-2 rounded-xl border border-primaryColorLight dark:border-primaryColorLight/40 bg-primaryColorLight/20 sm:bg-transparent text-primaryColorLight hover:bg-primaryColorLight hover:text-white transition-all duration-100 active:scale-95" data-type="email" data-text="Correo" title="Copiar Correo">
+                                             <button 
+                                             class="copy-icon mt-2 sm:mt-0 flex items-center justify-center gap-2 px-4 py-2 sm:p-2 rounded-xl border border-primaryColorLight dark:border-primaryColorLight/40 bg-primaryColorLight/20 sm:bg-transparent text-primaryColorLight hover:bg-primaryColorLight hover:text-white transition-all duration-100 active:scale-95" 
+                                             data-type="email" 
+                                             data-text="Correo" 
+                                             title="Copiar Correo" 
+                                             aria-label="Copiar Correo">
                                                   <i class="fa-solid fa-copy text-lg"></i>
                                                   <span class="sm:hidden text-sm font-semibold">Copiar</span>
                                              </button>
                                         </div>
-                                   </div>
+                                   </article>
                               </div>
 
                               <!-- CARD DIRECCIÓN -->
@@ -1679,7 +1650,8 @@
                                         <i class="fa-solid fa-location-dot"></i>
                                    </div>
 
-                                   <div class="space-y-1 w-full text-center sm:text-left">
+                                   <article class="space-y-1 w-full text-center sm:text-left">
+
                                         <p class="text-xs uppercase tracking-wider text-gray-500 dark:text-white/50 font-bold">
                                              Dirección:
                                         </p>
@@ -1692,13 +1664,13 @@
                                              <div class="flex flex-wrap justify-center md:justify-end gap-4 w-full">
                                                   <a href="https://maps.google.com/?q=Av.+Principal+de+El+Manicomio,+La+Pastora,+Caracas" 
                                                   target="_blank" 
-                                                  class="flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-primaryColorLight text-white hover:bg-primaryColorLight/90 active:scale-95 transition-all text-sm font-semibold shadow-md shadow-primaryColorLight/20">
+                                                  class="flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-primaryColorLight text-white hover:bg-primaryColorLight/90 active:scale-95 transition-all text-sm font-semibold shadow-md shadow-primaryColorLight/20" title="Ver en Google Maps" aria-label="Ver en Google Maps">
                                                        <i class="fa-solid fa-map-location-dot"></i>
                                                        <span>Ver en Google Maps</span>
                                                   </a>
                                              </div>
                                         </div>
-                                   </div>
+                                   </article>
                               </div>
                          </div>
 
@@ -1719,7 +1691,7 @@
                                    <!-- Nombre y Apellido -->
                                    <div class="space-y-2 relative">
                                         <label class="text-sm text-gray-800 dark:text-gray-200 font-semibold" for="fullname">Nombre y Apellido:</label>
-                                        <input type="text" id="fullname" name="fullname" placeholder="José Peréz" required autocomplete="off" class="w-full bg-sectionColor/50 dark:bg-white/5 border border-primaryColorLight dark:border-primaryColorLight/30 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                                        <input type="text" id="fullname" name="fullname" placeholder="José Peréz" required autocomplete="off" class="w-full bg-sectionColor/50 dark:bg-white/5 border border-primaryColorLight dark:border-primaryColorLight/30 rounded-xl px-3 py-3 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
                                         <!-- ICONO -->
                                         <span class="icon absolute right-2 top-12 transform -translate-y-1/2 text-lg"></span>
                                         <!-- mensajes -->
@@ -1732,7 +1704,7 @@
                                    <div class="space-y-2 relative">
                                         <label class="text-sm text-gray-800 dark:text-gray-200 font-semibold" for="subject">Asunto:</label>
                                         <!-- Input con padding a la derecha para el icono -->
-                                        <input type="text" id="subject" name="subject" placeholder="Necesito un programador." required autocomplete="off" class="w-full bg-sectionColor/50 dark:bg-white/5 border border-primaryColorLight dark:border-primaryColorLight/30 rounded-xl px-4 py-3 pr-10 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                                        <input type="text" id="subject" name="subject" placeholder="Necesito un programador." required autocomplete="off" class="w-full bg-sectionColor/50 dark:bg-white/5 border border-primaryColorLight dark:border-primaryColorLight/30 rounded-xl px-3 py-3 pr-10 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
                                         <span class="icon absolute right-2 top-12 transform -translate-y-1/2 text-lg"></span>
                                         <span class="error-empty text-red-500 text-sm hidden">Campo obligatorio</span>
                                         <span class="error-invalid text-red-500 text-sm hidden">Asunto inválido</span>
@@ -1743,7 +1715,7 @@
                               <!-- Email -->
                               <div class="space-y-2 relative">
                                    <label class="text-sm text-gray-800 dark:text-gray-200 font-semibold" for="email">Tu Correo:</label>
-                                   <input type="email" id="email" name="email" placeholder="joseperez@email.com" required autocomplete="off" class="w-full bg-sectionColor/50 dark:bg-white/5 border border-primaryColorLight dark:border-primaryColorLight/30 rounded-xl px-4 py-3 pr-10 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition" >
+                                   <input type="email" id="email" name="email" placeholder="joseperez@email.com" required autocomplete="off" class="w-full bg-sectionColor/50 dark:bg-white/5 border border-primaryColorLight dark:border-primaryColorLight/30 rounded-xl px-3 py-3 pr-10 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition" >
                                    <span class="icon absolute right-2 top-12 transform -translate-y-1/2 text-lg"></span>
                                    <span class="error-empty text-red-500 text-sm hidden">Campo obligatorio</span>
                                    <span class="error-invalid text-red-500 text-sm hidden">Correo inválido</span>
@@ -1754,7 +1726,7 @@
                               <div class="space-y-2">
                                    <label class="text-sm text-gray-800 dark:text-gray-200 font-semibold" for="message">Tu Mensaje:</label>
                                    
-                                   <textarea id="message" name="message" maxlength="2000" placeholder="Requiero una página web para mi negocio." rows="5" required autocomplete="off" class="w-full bg-sectionColor/50 dark:bg-white/5 border border-primaryColorLight dark:border-primaryColorLight/30 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition resize-none"></textarea>
+                                   <textarea id="message" name="message" maxlength="2000" placeholder="Requiero una página web para mi negocio." rows="5" required autocomplete="off" class="w-full bg-sectionColor/50 dark:bg-white/5 border border-primaryColorLight dark:border-primaryColorLight/30 rounded-xl px-3 py-3 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition resize-none"></textarea>
 
                                    <div class="flex justify-between items-start min-h-[20px] px-1">
                                         <div class="flex-1">
@@ -1814,9 +1786,9 @@
                <div class="container flex flex-col items-center gap-10 px-5">
                     <div class="py-10">
                          <!-- Logo modo Light -->
-                         <img src="./assets/img/logo.png" loading="lazy" alt="logo" class="w-28 md:w-40 hidden dark:block " >
+                         <img src="./assets/img/logo.png" loading="lazy" alt="Logo de Andres Vento" class="w-28 md:w-40 hidden dark:block " >
                          <!-- Logo modo Dark -->
-                         <img src="./assets/img/logo.png" loading="lazy" alt="black_logo" class="w-28 md:w-40 dark:hidden" >
+                         <img src="./assets/img/logo.png" loading="lazy" alt="Logo de Andres Vento (modo oscuro)" class="w-28 md:w-40 dark:hidden" >
 
                     </div>
                     <div>
