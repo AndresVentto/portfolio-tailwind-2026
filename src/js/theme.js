@@ -71,7 +71,7 @@ export function cargarParticles(color) {
                     value: 0.5
                },
                size: {
-                    value: 1.6,
+                    value: 1.7,
                     random: true
                },
                line_linked: {
@@ -79,7 +79,7 @@ export function cargarParticles(color) {
                     distance: 150,
                     color: color,
                     opacity: 0.4,
-                    width: 1.6
+                    width: 1.7
                },
                move: {
                     enable: true,

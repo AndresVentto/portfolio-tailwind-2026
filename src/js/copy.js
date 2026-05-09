@@ -43,7 +43,7 @@ export function copyAr() {
 
 export function renderContacto() {
     // Teléfono
-    const phoneLink = document.getElementById("phone-link");
+    const phoneLink = document.querySelectorAll(".phone-link");
 
     if (phoneLink) {
         phoneLink.href = `tel:${secretos.phone}`;

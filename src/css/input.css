@@ -298,6 +298,22 @@
      }
 }
 
+/* ===== Animación para las card de Proyectos: ===== */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Empieza un poco más abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Sube a su posición original */
+    }
+}
+
+.work_card_animated {
+    /* "backwards" para que no parpadee antes de empezar */
+    animation: slideInUp 0.5s cubic-bezier(0.25, 1, 0.5, 1) backwards;
+}
 
 /*===== ESTILO BARRA DE SCROLL ====*/
 ::-webkit-scrollbar {

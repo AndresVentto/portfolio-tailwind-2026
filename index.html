@@ -28,7 +28,7 @@
           <!--============== Google Fonts ================-->
           <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:opsz,wght@14..32,500&display=swap" rel="stylesheet">
           <!--============== Favicon ================-->
-          <link rel="icon" type="image/png" href="./assets/img/icon.png">
+          <link rel="icon" type="image/png" href="./assets/img/logoBlack.png">
           <!--============== Font Awesome 7.0.1 ================-->
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
           <!--============== Remix Icon ================-->
@@ -40,8 +40,8 @@
                <div class="relative container mx-auto flex justify-between items-center px-4 md:px-0">
                     <div class="cursor-pointer">
                          <a href="#inicio" aria-label="Ir al inicio">
-                              <img src="./assets/img/logo.png" loading="lazy" alt="Logo Andrés Vento" class="w-20 md:w-27 hidden dark:block" id="logo-claro">
-                              <img src="./assets/img/logoBlack.png" loading="lazy" alt="Logo Andrés Vento Oscuro" class="w-20 md:w-27 dark:hidden" id="logo-oscuro">
+                              <img src="./assets/img/logo.png" alt="Logo Andrés Vento" class="w-20 md:w-27 hidden dark:block" id="logo-claro">
+                              <img src="./assets/img/logoBlack.png" alt="Logo Andrés Vento Oscuro" class="w-20 md:w-27 dark:hidden" id="logo-oscuro">
                          </a>
                     </div>
 
@@ -146,7 +146,7 @@
                                                   </button>
                                              </div>
                                              <div class="social-icon">
-                                                  <button id="phone-link" title="Mi Teléfono" class="copy-icon text-2xl cursor-pointer" data-type="phone" data-text="Teléfono">
+                                                  <button title="Mi Teléfono" class="phone-link copy-icon text-2xl cursor-pointer" data-type="phone" data-text="Teléfono">
                                                        <i class="fa-solid fa-phone"></i>
                                                   </button>
                                              </div>
@@ -223,30 +223,30 @@
                     </header>
                     
                     <!-- Filtro PRO -->
-                    <div class="proyectos__taps relative w-full max-w-md mx-auto my-10 p-1 rounded-full border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b bg-ligthBodyColor dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                    <nav aria-label="Filtro de Categorías de Los Proyectos" class="proyectos__taps relative w-full max-w-md mx-auto my-10 p-1 rounded-full border-2 border-primaryColor dark:border-primaryColorLight bg-gradient-to-b bg-ligthBodyColor dark:from-[hsl(211,100%,12%)] dark:to-[hsl(216,100%,4%)] backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.5)]">
                          
                          <!-- Indicador -->
                          <div id="indicador" class="absolute top-1 left-1 h-[calc(100%-8px)] w-1/4 rounded-full bg-primaryColorLight transition-all duration-300 ease-in-out"></div>
 
                          <!-- Tabs -->
                          <div class="flex relative z-10">
-                              <button type="button" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium text-whiteColor cursor-pointer" data-tabs="todos">
+                              <button type="button" aria-pressed="true" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium text-whiteColor cursor-pointer" data-tabs="todos">
                                    Todos
                               </button>
 
-                              <button type="button" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="frontend">
+                              <button type="button" aria-pressed="false" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="frontend">
                                    Frontend
                               </button>
 
-                              <button type="button" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="backend">
+                              <button type="button" aria-pressed="false" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="backend">
                                    Backend
                               </button>
 
-                              <button type="button" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="mobile">
+                              <button type="button" aria-pressed="false" class="tab flex-1 py-2 text-sm sm:text-sm md:text-base font-medium cursor-pointer" data-tabs="mobile">
                                    Mobile
                               </button>
                          </div>
-                    </div>
+                    </nav>
                     <br>
                     <div class="mt-6 relative rounded-4xl overflow-x-clip">
 
@@ -262,47 +262,48 @@
                                         <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
                                         
                                         <div class="relative p-3">
-                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                                  <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-                                             </div>
+                                             <figure class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-1.jpg" alt="Captura de Pantalla del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                             </figure>
                                         </div>
 
                                         <div class="p-6 pt-2 space-y-4 relative z-10">
-                                             <div class="space-y-2">
-                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+
+                                             <header class="space-y-2">
+                                                  <h3 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
                                                        Proyecto 1
-                                                  </h2>
+                                                  </h3>
 
                                                   <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
                                                        Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
                                                   </p>
-                                             </div>
+                                             </header>
 
-                                             <div class="flex flex-wrap gap-2">
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                             <ul class="flex flex-wrap gap-2">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
                                                        HTML
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
                                                        Sass
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
                                                        JavaScript
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
                                                        PHP
-                                                  </span>
+                                                  </li>
                                                   
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                        MySQL
-                                                  </span>
-                                             </div>
+                                                  </li>
+                                             </ul>
 
                                              <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
 
-                                             <div class="flex items-center justify-between">
+                                             <footer class="flex items-center justify-between">
                                                   <button onclick="event.preventDefault(); openModal('modal-project-1')" type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link ">
                                                        Ver más detalles
                                                        <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
@@ -312,7 +313,7 @@
                                                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                                        Live
                                                   </span>
-                                             </div>
+                                             </footer>
                                         </div>
                                    </article>
                               </li>                         
@@ -324,48 +325,47 @@
                                         <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
                                         <div class="relative p-3">
-                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                                  <img src="./assets/img/project-2.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-
-                                             </div>
+                                             <figure class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-2.jpg" alt="Captura de Pantalla del Proyecto 2" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                             </figure>
                                         </div>
 
                                         <div class="p-6 pt-2 space-y-4 relative z-10">
-                                             <div class="space-y-2">
-                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                             <header class="space-y-2">
+                                                  <h3 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
                                                        Proyecto 2
-                                                  </h2>
+                                                  </h3>
 
                                                   <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
                                                        Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
                                                   </p>
-                                             </div>
+                                             </header>
 
-                                             <div class="flex flex-wrap gap-2">
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                             <ul class="flex flex-wrap gap-2">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
                                                        HTML
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
                                                        Sass
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
                                                        JavaScript
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
                                                        PHP
-                                                  </span>
+                                                  </li>
                                                   
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                        MySQL
-                                                  </span>
-                                             </div>
+                                                  </li>
+                                             </ul>
 
                                              <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
 
-                                             <div class="flex items-center justify-between">
+                                             <footer class="flex items-center justify-between">
                                                   <button type="button" class="flex items-center gap-1 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
                                                        Ver más detalles
                                                        <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
@@ -375,7 +375,7 @@
                                                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                                        Live
                                                   </span>
-                                             </div>
+                                             </footer>
                                         </div>
                                    </article>
                               </li>     
@@ -388,49 +388,47 @@
                                         </div>
 
                                         <div class="relative p-3">
-                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                             <figure class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
                                                   <img src="./assets/img/project-3.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-
-                                                  
-                                             </div>
+                                             </figure>
                                         </div>
 
                                         <div class="p-6 pt-2 space-y-4 relative z-10">
-                                             <div class="space-y-2">
-                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                             <header class="space-y-2">
+                                                  <h3 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
                                                        Proyecto 3
-                                                  </h2>
+                                                  </h3>
 
                                                   <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
                                                        Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
                                                   </p>
-                                             </div>
+                                             </header>
 
-                                             <div class="flex flex-wrap gap-2">
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                             <ul class="flex flex-wrap gap-2">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
                                                        HTML
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
                                                        Sass
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
                                                        JavaScript
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
                                                        PHP
-                                                  </span>
+                                                  </li>
                                                   
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                        MySQL
-                                                  </span>
-                                             </div>
+                                                  </li>
+                                             </ul>
 
                                              <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
 
-                                             <div class="flex items-center justify-between">
+                                             <footer class="flex items-center justify-between">
                                                   <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
                                                        Ver más detalles
                                                        <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
@@ -440,7 +438,7 @@
                                                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                                        Live
                                                   </span>
-                                             </div>
+                                             </footer>
                                         </div>
                                    </article>
                               </li>
@@ -453,48 +451,47 @@
                                         </div>
 
                                         <div class="relative p-3">
-                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                                  <img src="./assets/img/project-4.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-                                                  
-                                             </div>
+                                             <figure class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-4.jpg" alt="Imagen del Proyecto 1" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                             </figure>
                                         </div>
 
                                         <div class="p-6 pt-2 space-y-4 relative z-10">
-                                             <div class="space-y-2">
-                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                             <header class="space-y-2">
+                                                  <h3 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
                                                        Proyecto 4
-                                                  </h2>
+                                                  </h3>
 
                                                   <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
                                                        Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
                                                   </p>
-                                             </div>
+                                             </header>
 
-                                             <div class="flex flex-wrap gap-2">
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                             <ul class="flex flex-wrap gap-2">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
                                                        HTML
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
                                                        Sass
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
                                                        JavaScript
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
                                                        PHP
-                                                  </span>
+                                                  </li>
                                                   
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                        MySQL
-                                                  </span>
-                                             </div>
+                                                  </li>
+                                             </ul>
 
                                              <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
 
-                                             <div class="flex items-center justify-between">
+                                             <footer class="flex items-center justify-between">
                                                   <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
                                                        Ver más detalles
                                                        <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
@@ -504,7 +501,7 @@
                                                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                                        Live
                                                   </span>
-                                             </div>
+                                             </footer>
                                         </div>
                                    </article>
                               </li>
@@ -516,49 +513,47 @@
                                         <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
                                         <div class="relative p-3">
-                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                                  <img src="./assets/img/project-5.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-
-                                                  
-                                             </div>
+                                             <figure class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-5.jpg" alt="Imagen del Proyecto 1" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                             </figure>
                                         </div>
 
                                         <div class="p-6 pt-2 space-y-4 relative z-10">
-                                             <div class="space-y-2">
-                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                             <header class="space-y-2">
+                                                  <h3 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
                                                        Proyecto 5
-                                                  </h2>
+                                                  </h3>
 
                                                   <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
                                                        Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
                                                   </p>
-                                             </div>
+                                             </header>
 
-                                             <div class="flex flex-wrap gap-2">
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                             <ul class="flex flex-wrap gap-2">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
                                                        HTML
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
                                                        Sass
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
                                                        JavaScript
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
                                                        PHP
-                                                  </span>
+                                                  </li>
                                                   
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                        MySQL
-                                                  </span>
-                                             </div>
+                                                  </li>
+                                             </ul>
 
                                              <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
 
-                                             <div class="flex items-center justify-between">
+                                             <footer class="flex items-center justify-between">
                                                   <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
                                                        Ver más detalles
                                                        <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
@@ -568,7 +563,7 @@
                                                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                                        Live
                                                   </span>
-                                             </div>
+                                             </footer>
                                         </div>
                                    </article> 
                               </li>
@@ -580,49 +575,47 @@
                                         <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
                                         <div class="relative p-3">
-                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                                  <img src="./assets/img/project-2.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-
-                                                  
-                                             </div>
+                                             <figure class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-2.jpg" alt="Imagen del Proyecto 1" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />                                                  
+                                             </figure>
                                         </div>
 
                                         <div class="p-6 pt-2 space-y-4 relative z-10">
-                                             <div class="space-y-2">
-                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                             <header class="space-y-2">
+                                                  <h3 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
                                                        Proyecto 6
-                                                  </h2>
+                                                  </h3>
 
                                                   <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
                                                        Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
                                                   </p>
-                                             </div>
+                                             </header>
 
-                                             <div class="flex flex-wrap gap-2">
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                             <ul class="flex flex-wrap gap-2">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
                                                        HTML
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
                                                        Sass
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
                                                        JavaScript
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
                                                        PHP
-                                                  </span>
+                                                  </li>
                                                   
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                        MySQL
-                                                  </span>
-                                             </div>
+                                                  </li>
+                                             </ul>
 
                                              <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
 
-                                             <div class="flex items-center justify-between">
+                                             <footer class="flex items-center justify-between">
                                                   <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
                                                        Ver más detalles
                                                        <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
@@ -632,7 +625,7 @@
                                                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                                        Live
                                                   </span>
-                                             </div>
+                                             </footer>
                                         </div>
                                    </article> 
                               </li>
@@ -644,49 +637,47 @@
                                         <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
                                         <div class="relative p-3">
-                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                                  <img src="./assets/img/project-3.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-
-                                                  
-                                             </div>
+                                             <figure class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-3.jpg" alt="Imagen del Proyecto 1" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                             </figure>
                                         </div>
 
                                         <div class="p-6 pt-2 space-y-4 relative z-10">
-                                             <div class="space-y-2">
-                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                             <header class="space-y-2">
+                                                  <h3 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
                                                        Proyecto 7
-                                                  </h2>
+                                                  </h3>
 
                                                   <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
                                                        Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
                                                   </p>
-                                             </div>
+                                             </header>
 
-                                             <div class="flex flex-wrap gap-2">
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                             <ul class="flex flex-wrap gap-2">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
                                                        HTML
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
                                                        Sass
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
                                                        JavaScript
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
                                                        PHP
-                                                  </span>
+                                                  </li>
                                                   
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                        MySQL
-                                                  </span>
-                                             </div>
+                                                  </li>
+                                             </ul>
 
                                              <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
 
-                                             <div class="flex items-center justify-between">
+                                             <footer class="flex items-center justify-between">
                                                   <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
                                                        Ver más detalles
                                                        <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
@@ -696,7 +687,7 @@
                                                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                                        Live
                                                   </span>
-                                             </div>
+                                             </footer>
                                         </div>
                                    </article> 
                               </li>
@@ -708,49 +699,47 @@
                                         <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
                                         <div class="relative p-3">
-                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                                  <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-
-                                                  
-                                             </div>
+                                             <figure class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" /> 
+                                             </figure>
                                         </div>
 
                                         <div class="p-6 pt-2 space-y-4 relative z-10">
-                                             <div class="space-y-2">
-                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                             <header class="space-y-2">
+                                                  <h3 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
                                                        Proyecto 8
-                                                  </h2>
+                                                  </h3>
 
                                                   <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
                                                        Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
                                                   </p>
-                                             </div>
+                                             </header>
 
-                                             <div class="flex flex-wrap gap-2">
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                             <ul class="flex flex-wrap gap-2">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
                                                        HTML
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
                                                        Sass
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
                                                        JavaScript
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
                                                        PHP
-                                                  </span>
+                                                  </li>
                                                   
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                        MySQL
-                                                  </span>
-                                             </div>
+                                                  </li>
+                                             </ul>
 
                                              <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
 
-                                             <div class="flex items-center justify-between">
+                                             <footer class="flex items-center justify-between">
                                                   <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
                                                        Ver más detalles
                                                        <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
@@ -760,7 +749,7 @@
                                                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                                        Live
                                                   </span>
-                                             </div>
+                                             </footer>
                                         </div>
                                    </article>
                               </li>
@@ -772,47 +761,47 @@
                                         <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.2),transparent_70%)]"></div>
 
                                         <div class="relative p-3">
-                                             <div class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
-                                                  <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
-                                             </div>
+                                             <figure class="aspect-video rounded-2xl overflow-hidden relative shadow-inner bg-zinc-200 dark:bg-zinc-800">
+                                                  <img src="./assets/img/project-1.jpg" alt="Imagen del Proyecto 1" loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-90 dark:group-hover:brightness-75" />
+                                             </figure>
                                         </div>
 
                                         <div class="p-6 pt-2 space-y-4 relative z-10">
-                                             <div class="space-y-2">
-                                                  <h2 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
+                                             <header class="space-y-2">
+                                                  <h3 class="text-3xl font-bold tracking-tight text-[hsl(209,87%,21%)] dark:text-[hsl(0,0%,98%)] md:text-center">
                                                        Proyecto 9
-                                                  </h2>
+                                                  </h3>
 
                                                   <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 text-base sm:text-md md:text-lg">
                                                        Real-time social media analytics dashboard with data visualization, sentiment analysis, and automated insights.
                                                   </p>
-                                             </div>
+                                             </header>
 
-                                             <div class="flex flex-wrap gap-2">
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
+                                             <ul class="flex flex-wrap gap-2">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#E34F26]/10 text-[#E34F26] border border-[#E34F26]/20 backdrop-blur-sm tracking-wide">
                                                        HTML
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#CC6699]/10 text-[#CC6699] border border-[#CC6699]/20 backdrop-blur-sm tracking-wide">
                                                        Sass
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#bdac30]/10 text-[#bdac30] border border-[#bdac30]/20 backdrop-blur-sm tracking-wide">
                                                        JavaScript
-                                                  </span>
+                                                  </li>
 
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-[#777BB4]/10 text-[#777BB4] border border-[#777BB4]/20 backdrop-blur-sm tracking-wide">
                                                        PHP
-                                                  </span>
+                                                  </li>
                                                   
-                                                  <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                  <li class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                                        MySQL
-                                                  </span>
-                                             </div>
+                                                  </li>
+                                             </ul>
 
                                              <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-300 dark:via-white/10 to-transparent"></div>
 
-                                             <div class="flex items-center justify-between">
+                                             <footer class="flex items-center justify-between">
                                                   <button type="button" class="flex items-center gap-2 text-md font-bold cursor-pointer text-[hsl(209,74%,45%)] dark:text-emerald-400 group/link">
                                                        Ver más detalles
                                                        <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
@@ -822,7 +811,7 @@
                                                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                                        Live
                                                   </span>
-                                             </div>
+                                             </footer>
                                         </div>
                                    </article>
                               </li>
@@ -834,8 +823,7 @@
                <section id="sobre_mi" class="relative overflow-x-clip  px-5">
 
                     <!-- Fondo estilo -->
-                    <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(#475569 1px, transparent 1px); background-size: 24px 24px;">
-                    </div>
+                    <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(#475569 1px, transparent 1px); background-size: 24px 24px;"></div>
 
                     <div class="absolute right-0 top-[-20%] w-80 h-80 rounded-full blur-[150px] opacity-50 bg-blue-400 dark:bg-primaryColorLight mix-blend-normal dark:mix-blend-screen"></div>
 
@@ -844,31 +832,29 @@
                     <div class="container relative z-10">
 
                          <!-- Título -->
-                         <div class="text-center mb-16">
+                         <header class="text-center mb-16">
                               <h2 class="subtitle">Un Poco Sobre Mí</h2>
-                         </div>
+                         </header>
 
                          <!-- Contenido -->
                          <div class="flex flex-col md:flex-row items-center gap-12">
 
                               <!-- Imagen estilo INICIO -->
-                              <div class="relative md:w-1/2 flex justify-center">
-
+                              <figure class="relative md:w-1/2 flex justify-center">
                                    <div class="absolute left-0 bottom-0 w-80 h-80 bg-primaryColorLight mix-blend-screen rounded-full blur-[150px] opacity-50"></div>
-
                                    <div class="border-animated w-full hover:rotate-[-3.5deg] duration-300">
-                                        <img src="./assets/img/proyecto_de_vision_artificial_samsung.png" alt="Foto de Andrés Vento" class="rounded-[38px] w-full">
+                                        <img src="./assets/img/proyecto_de_vision_artificial_samsung.png" alt="Fotografia de Andrés Vento en el proyecto final de Visión Artificial de Samsung Innovation Campus 2024" loading="lazy" class="rounded-[38px] w-full">
                                    </div>
-                              </div>
+                              </figure>
 
                               <!-- Texto -->
-                              <article class="md:w-1/2 space-y-6 text-center md:text-left">
+                              <div class="md:w-1/2 space-y-6 text-center md:text-left">
 
-                                   <h2 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white">
+                                   <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white">
                                         <span class="subtitle leading-relaxed md:text-3xl">
                                              Soy un Programador Web FullStack
                                         </span>
-                                   </h2>
+                                   </h3>
 
                                    <div class="space-y-4 max-w-2xl mx-auto md:mx-0">
                                         <p class="text-base sm:text-lg md:text-xl text-black dark:text-white leading-relaxed">
@@ -884,7 +870,7 @@
                                         </p>
                                    </div>
 
-                                   <div class="flex flex-col sm:flex-row items-center md:items-start gap-5 pt-4">
+                                   <nav class="flex flex-col sm:flex-row items-center md:items-start gap-5 pt-4">
                                         <a href="./assets/doc/Andrés_Vento_TSU_en_Informática_CV.pdf" target="_blank" rel="noopener noreferrer" title="Mi Currículum" class="btn_outline text-lg sm:text-base md:text-lg px-9">
                                              Ver Currículum <i class="fa-solid fa-file-lines"></i>
                                         </a>
@@ -892,8 +878,8 @@
                                         <a href="#contacto" title="Contacto" class="btn_outline text-lg sm:text-base md:text-lg px-9">
                                              ¡Contáctame! <i class="fa-solid fa-phone"></i>
                                         </a>
-                                   </div>
-                              </article>
+                                   </nav>
+                              </div>
                          </div>
                     </div>
                </section>
@@ -912,319 +898,319 @@
                     <div class="skills_slider overflow-hidden">
                          <div class="skills_track flex gap-5">
                               <!-- ===== GRUPO ORIGINAL ===== -->
-                              <div class="skills_group flex">
+                              <ul class="skills_group flex">
                                    <!-- HTML LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
-                                             <img src="./assets/img/html.svg" loading="lazy" alt="HTML-5" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                             <img src="./assets/img/html.svg" loading="lazy" alt="HTML" class="max-w-16"> 
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   HTML
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- CSS LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/css-3.svg" loading="lazy" alt="CSS-3" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   CSS
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- SASS LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/sass.svg" loading="lazy" alt="Sass" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   SASS
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- JS LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/javascript.svg" loading="lazy" alt="JavaScript" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   JavaScript
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- ReactJS LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/react.svg" loading="lazy" alt="ReactJS" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   ReactJS
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- NodeJS LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/nodejs.svg" loading="lazy" alt="NodeJS" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   NodeJS
-                                             </p> 
-                                        </div> 
-                                   </div>
+                                             </figcaption> 
+                                        </figure> 
+                                   </li>
                                    <!-- Tailwind LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/tailwind.svg" loading="lazy" alt="Tailwind" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Tailwind
-                                             </p> 
-                                        </div> 
-                                   </div>                                   
+                                             </figcaption> 
+                                        </figure> 
+                                   </li>                                   
                                    <!-- PYTHON LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/python.svg" loading="lazy" alt="Python" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Python
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- JAVA LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/java.svg" loading="lazy" alt="Java" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Java
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- MySQL LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/mysql.svg" loading="lazy" alt="MySQL" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   MySQL
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- PostgreSQL LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/postgresql.svg" loading="lazy" alt="PostgreSQL" class="max-w-16"> 
-                                             <p class="text-center text-md text-black dark:text-white">
+                                             <figcaption class="text-center text-md text-black dark:text-white">
                                                   PostgreSQL
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- Git LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/git.svg" loading="lazy" alt="Git" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Git
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- GitHub LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/github.svg" loading="lazy" alt="GitHub" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   GitHub
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- PHP LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/php.svg" loading="lazy" alt="PHP" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   PHP
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- WordPress LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/wordpress.svg" loading="lazy" alt="WordPress" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   WordPress
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- Linux LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/linux.svg" loading="lazy" alt="Linux" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Linux
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- Bash LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/bash.svg" loading="lazy" alt="Bash" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Bash
-                                             </p> 
-                                        </div> 
-                                   </div> 
-                              </div>
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
+                              </ul>
 
                               <!-- ===== GRUPO DUPLICADO ===== -->
-                              <div class="skills_group flex">
+                              <ul class="skills_group flex">
                                    
                                    <!-- HTML LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/html.svg" loading="lazy" alt="HTML-5" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   HTML
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- CSS LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/css-3.svg" loading="lazy" alt="CSS-3" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   CSS
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- SASS LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/sass.svg" loading="lazy" alt="Sass" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   SASS
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- JS LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/javascript.svg" loading="lazy" alt="JavaScript" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   JavaScript
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- ReactJS LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/react.svg" loading="lazy" alt="ReactJS" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   ReactJS
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- NodeJS LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/nodejs.svg" loading="lazy" alt="NodeJS" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   NodeJS
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- Tailwind LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/tailwind.svg" loading="lazy" alt="Tailwind" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Tailwind
-                                             </p> 
-                                        </div> 
-                                   </div>
+                                             </figcaption> 
+                                        </figure> 
+                                   </li>
                                    <!-- PYTHON LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/python.svg" loading="lazy" alt="Python" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Python
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- JAVA LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/java.svg" loading="lazy" alt="Java" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Java
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- MySQL LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/mysql.svg" loading="lazy" alt="MySQL" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   MySQL
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- PostgreSQL LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-40 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-40 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/postgresql.svg" loading="lazy" alt="PostgreSQL" class="max-w-16"> 
-                                             <p class="text-center text-md text-black dark:text-white">
+                                             <figcaption class="text-center text-md text-black dark:text-white">
                                                   PostgreSQL
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- Git LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/git.svg" loading="lazy" alt="Git" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Git
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- GitHub LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/github.svg" loading="lazy" alt="GitHub" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   GitHub
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- PHP LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/php.svg" loading="lazy" alt="PHP" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   PHP
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- WordPress LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/wordpress.svg" loading="lazy" alt="WordPress" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   WordPress
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- Linux LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/linux.svg" loading="lazy" alt="Linux" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Linux
-                                             </p> 
-                                        </div> 
-                                   </div> 
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
                                    <!-- Bash LOGO/ICONO --> 
-                                   <div class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
-                                        <div class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
+                                   <li class="skills_card w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                                        <figure class="border-2 border-primaryColorLight dark:bg-darkSectionColor grid place-items-center px-4 py-7 rounded-3xl space-y-5 hover:bg-primaryColor hover:border-primaryColorLight hover:text-white duration-300 shadow-[0_0_5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_10px_rgba(59,130,246,0.8)]"> 
                                              <img src="./assets/img/bash.svg" loading="lazy" alt="Bash" class="max-w-16"> 
-                                             <p class="text-center text-xl text-black dark:text-white">
+                                             <figcaption class="text-center text-xl text-black dark:text-white">
                                                   Bash
-                                             </p> 
-                                        </div> 
-                                   </div> 
-                              </div>
+                                             </figcaption> 
+                                        </figure> 
+                                   </li> 
+                              </ul>
                          </div>
                     </div>
                </section>
@@ -1256,13 +1242,16 @@
                                         <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
                                         
                                         <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
-                                             <time datetime="2025-09" class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">
-                                                  Sep 2025 - Dic 2025
-                                             </time>
+                                             <div class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 flex items-center gap-1">
+                                                  <time datetime="2025-09">Sep 2025</time> 
+                                                  <span> - </span> 
+                                                  <time datetime="2025-12">Dic 2025</time>
+                                             </div>
 
-                                             <h4 class="text-lg md:text-xl font-bold uppercase mb-1">
-                                                  💼 Pasantías Profesionales 
-                                             </h4>
+                                             <!-- Cambiado a h3 para respetar la jerarquía semántica -->
+                                             <h3 class="text-lg md:text-xl font-bold uppercase mb-1">
+                                                  💼 Pasantías Profesionales
+                                             </h3>
 
                                              <p class="text-sm md:text-base font-medium opacity-90 mb-2">
                                                   Agencia Bolivariana para Actividades Espaciales (ABAE)
@@ -1284,7 +1273,11 @@
                                    <li class="relative pl-12">
                                         <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
                                         <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg transition duration-300">
-                                             <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">Mar 2022 — May 2026</time>
+                                             <div class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 flex items-center gap-1">
+                                                  <time datetime="2025-09">Sep 2025</time> 
+                                                  <span> - </span> 
+                                                  <time datetime="2025-12">Dic 2025</time>
+                                             </div>
                                              <h4 class="text-lg md:text-xl font-bold uppercase mb-1">🎓 Técnico Superior Universitario en Informática</h4>
                                              <p class="text-sm md:text-base opacity-80 italic">Instituto Universitario "Jesús Obrero" (IUJO), Caracas.</p>
                                         </article>
@@ -1295,7 +1288,11 @@
                                         <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
                                         <a href="./assets/doc/Samsung_Inovation_Campus_2024.pdf" target="_blank" rel="noopener noreferrer" title="Certificado Python e IA" class="block">
                                              <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
-                                                  <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">Oct 2024 — Mar 2025</time>
+                                                  <div class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 flex items-center gap-1">
+                                                       <time datetime="2024-10">Oct 2024</time> 
+                                                       <span> - </span> 
+                                                       <time datetime="2025-03">Mar 2025</time>
+                                                  </div>
                                                   <h4 class="text-lg md:text-xl font-bold uppercase mb-1">🐍 Python e Inteligencia Artificial 🤖</h4>
                                                   <p class="text-sm md:text-base opacity-80 font-medium">Samsung Innovation Campus</p>
                                              </article>
@@ -1307,7 +1304,11 @@
                                         <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
                                         <a href="./assets/doc/Certificado-Ciberseguridad-Hacking.pdf" target="_blank" rel="noopener noreferrer" title="Certificado Hacking Ético" class="block">
                                              <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition duration-300 hover:scale-[1.01]">
-                                                  <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">Abril 2026</time>
+                                                  <div class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 flex items-center gap-1">
+                                                       <time datetime="2026-04">Abril 2026</time> 
+                                                       <span> - </span> 
+                                                       <time datetime="2026-07">Julio 2026</time>
+                                                  </div>
                                                   <h4 class="text-lg md:text-xl font-bold uppercase mb-1">🔐 Hacking Ético y Ciberseguridad 🛡️</h4>
                                                   <p class="text-sm md:text-base opacity-80 font-medium">BIG School - Formación Profesional</p>
                                              </article>
@@ -1321,9 +1322,11 @@
                                         
                                         <a href="./assets/doc/Certificado-Desarrollo-Con-IA.pdf" target="_blank" rel="noopener noreferrer" title="Certificado Desarrollo con IA" class="block">
                                              <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg transition duration-300 hover:scale-[1.01]">
-                                                  <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">
-                                                       Abril 2026
-                                                  </time>
+                                                  <div class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 flex items-center gap-1">
+                                                       <time datetime="2026-04">Abril 2026</time> 
+                                                       <span> - </span> 
+                                                       <time datetime="2026-07">Julio 2026</time>
+                                                  </div>
                                                   <h4 class="text-lg md:text-xl font-bold uppercase mb-1">
                                                        🧠 Desarrollo con Inteligencia Artificial
                                                   </h4>
@@ -1339,11 +1342,11 @@
 
                                         <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
                                         
-                                        <a href="./assets/doc/IUJO-CEP PYTHON.pdf" target="_blank" rel="noopener noreferrer" title="Certificado Desarrollo con IA" class="block">
+                                        <a href="./assets/doc/IUJO-CEP-PYTHON.pdf" target="_blank" rel="noopener noreferrer" title="Certificado Desarrollo con IA" class="block">
                                              <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg transition duration-300 hover:scale-[1.01]">
-                                                  <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">
-                                                       Julio 2024
-                                                  </time>
+                                                  <div class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 flex items-center gap-1">
+                                                       <time datetime="2024-07">Julio 2024</time>
+                                                  </div>
                                                   <h4 class="text-lg md:text-xl font-bold uppercase mb-1">
                                                        🐍 Programación Básica con Python
                                                   </h4>
@@ -1359,11 +1362,11 @@
 
                                         <span class="absolute left-[6px] md:left-[10px] top-2 w-4 h-4 bg-primaryColorLight rounded-full border-4 border-white dark:border-darkBodyColor" aria-hidden="true"></span>
                                         
-                                        <a href="./assets/doc/IUJO-CEP JAVASCRIPT.pdf" target="_blank" rel="noopener noreferrer" title="Certificado JS Intermedio" class="block">
+                                        <a href="./assets/doc/IUJO-CEP-JAVASCRIPT.pdf" target="_blank" rel="noopener noreferrer" title="Certificado JS Intermedio" class="block">
                                              <article class="cv_card p-5 md:p-6 rounded-2xl bg-white dark:bg-darkSectionColor/60 backdrop-blur-md border border-primaryColorLight shadow-lg transition duration-300 hover:scale-[1.01]">
-                                                  <time class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 block">
-                                                       Marzo 2023
-                                                  </time>
+                                                  <div class="text-primaryColor dark:text-primaryLight text-sm font-semibold mb-2 flex items-center gap-1">
+                                                       <time datetime="2023-03">Marzo 2023</time>
+                                                  </div>
                                                   <h4 class="text-lg md:text-xl font-bold uppercase mb-1">
                                                        🌐 Desarrollo Web con JavaScript 💻 
                                                   </h4>
@@ -1562,9 +1565,7 @@
                <section id="contacto" class="container py-1 relative overflow-hidden px-5">
                     
                     <header class="text-center mb-16">
-                         <h2 class="subtitle font-bold">
-                              ¡Contáctame! 
-                         </h2>
+                         <h2 class="subtitle font-bold"> ¡Contáctame! </h2>
                     </header>
 
                     <div class="absolute right-50 bottom-[30%] w-80 h-80 rounded-full blur-[150px] opacity-50 bg-blue-400 dark:bg-primaryColorLight mix-blend-normal dark:mix-blend-screen"></div>  
@@ -1589,7 +1590,7 @@
                                         </p>
                                         
                                         <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-                                             <a id="phone-link" href="#" class="text-lg sm:text-xl text-gray-900 dark:text-white hover:text-primaryColorLight transition-colors duration-300">
+                                             <a href="#" class="phone-link text-lg sm:text-xl text-gray-900 dark:text-white hover:text-primaryColorLight transition-colors duration-300">
                                                   +58 424 *** ***2
                                              </a>
                                              
@@ -1680,9 +1681,9 @@
                               <!-- Título del formulario -->
 
                               <div class="text-center">
-                                   <h2 class="text-3xl sm:text-2xl md:text-2xl lg:text-3xl bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-800 dark:from-blue-300 dark:via-cyan-500 dark:to-blue-600 inline-block text-transparent bg-clip-text pb-4">
+                                   <h3 class="text-3xl sm:text-2xl md:text-2xl lg:text-3xl bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-800 dark:from-blue-300 dark:via-cyan-500 dark:to-blue-600 inline-block text-transparent bg-clip-text pb-4">
                                         ¡Mándame un Mensaje! <span class="text-2xl">💬</span>
-                                   </h2>
+                                   </h3>
                               </div>
 
                               <!-- FILA: Nombre/Apellido y Asunto -->
@@ -1791,7 +1792,7 @@
                          <img src="./assets/img/logo.png" loading="lazy" alt="Logo de Andres Vento (modo oscuro)" class="w-28 md:w-40 dark:hidden" >
 
                     </div>
-                    <div>
+                    <nav>
                          <ul class="flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
                               <li>
                                    <a href="#proyectos" class="nav-link text-primaryLight dark:text-whiteColor">Proyectos</a>
@@ -1815,7 +1816,7 @@
                                    <a href="#contacto" class="nav-link text-primaryLight dark:text-whiteColor">Contacto</a>
                               </li>
                          </ul>
-                    </div>
+                    </nav>
                     <div class="flex flex-wrap justify-center items-center gap-y-3 text-white dark:text-primaryLight text-center">
                          <p class="text-base sm:text-lg md:text-xl">&copy; 2024 Hecho a mano con mucho ❤️ por <span class="font-bold">Andrés. E. Vento. C.</span></p>
                     </div>

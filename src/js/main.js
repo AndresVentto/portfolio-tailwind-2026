@@ -18,9 +18,10 @@ closeModal('modal-project-1');
  
 
 // Deshabilitar clik derecho
-document.addEventListener('contextmenu', event => event.preventDefault());
+// document.addEventListener('contextmenu', event => event.preventDefault());
+
 // Deshabilitar selección de texto
-document.onselectstart = function() { return false; };
+// document.onselectstart = function() { return false; };
 
 
 
